@@ -1,0 +1,72 @@
+{
+    "id": "betzold_flexeo:flexeo_box",
+    "parameters": [
+        {
+            "key": "materialBoxes",
+            "type": "Material",
+            "labels": {
+                "en": "Material Box",
+                "de": "Material Box"
+            },
+            "global": true,
+            "sort": 1,
+            "visible": true,
+            "validValues": [
+                "betzold_flexeo:box_yellow",
+                "betzold_flexeo:box_orange",
+                "betzold_flexeo:box_light_greem",
+                "betzold_flexeo:box_dark_green",
+                "betzold_flexeo:box_light_blue",
+                "betzold_flexeo:box_dark_blue",
+                "betzold_flexeo:box_transparent"
+            ]
+        }
+    ],
+    "onUpdate": "
+        if (isnull(inited)) {
+            inited = true;
+            wallthickness = 19;
+            totalHeight = 888;
+            legHeight = 65;
+            width = 335;
+            depth = 480 - wallthickness;
+            elementType = 'box';
+        }
+    ",
+    "boundingGeometry": "
+        AddCube(Vector3f{width, depth, 150});
+    ",
+    "geometry": "
+        BeginObjGroup('BOX');
+            AddExternalMesh('betzold_flexeo:flexeo_1_EK_Teile_Kunststoff_Box', Vector3f{425, -310, 149}, Vector3f{ -212, 155, 0});
+             RotateMatrixBy(Vector3f{0, 0, 1}, Vector3f{0, 0, 0}, 90);
+             MoveMatrixBy(Vector3f{width / 2, depth / 2 - 15, wallthickness / 2});
+             SetObjSurface(materialBoxes);
+            AddExternalMesh('betzold_flexeo:flexeo_1_EK_Teile_Fuhrungen_Boxen', Vector3f{350, -335, 34}, Vector3f{ -175, 167, 55});
+             RotateMatrixBy(Vector3f{0, 0, 1}, Vector3f{0, 0, 0}, 90);
+             MoveMatrixBy(Vector3f{width / 2, depth / 2 - 15, wallthickness / 2});
+             SetObjSurface('betzold_flexeo:metal');
+        EndObjGroup('BOX');
+         MoveMatrixBy(Vector3f{0, 0, 70});
+    ",
+    "childDockings": {
+        "points": [
+            {
+                "mask": "interiorParts",
+                "position": "{0, 0, 150 / 2}",
+                "collisionCondition": "
+                    for (_.i = 0; _.i < length(collidingComponentIDs); _.i++) {
+                        _.runtimeIdOfCollidingComponent = get(collidingComponentIDs, _.i);
+                        _.externalIdOfCollidingComponent = getComponentProperty('externalId', _.runtimeIdOfCollidingComponent);
+
+                        if (in(_.externalIdOfCollidingComponent, 'flexeo_box') || in(_.externalIdOfCollidingComponent, 'flexeo_shelf')) {
+                            return false;
+                        }
+                    }
+                    return true;
+                "
+            }
+        ]
+    },
+    "articleNr": "'betzold_flexeo:flexeo_box'"
+}

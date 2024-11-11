@@ -1,0 +1,70 @@
+{
+    "id": "betzold_flexeo:flexeo_shelf",
+    "parameters": [
+        {
+            "key": "materialShelf",
+            "type": "Material",
+            "global": true,
+            "labels": {
+                "en": "Material Interior",
+                "de": "Material Innenaustattung"
+            },
+            "sort": 1,
+            "visible": true,
+            "validValues": [
+                "betzold_flexeo:beech",
+                "betzold_flexeo:oak",
+                "betzold_flexeo:maple",
+                "betzold_flexeo:beech_dark",
+                "betzold_flexeo:grey",
+                "betzold_flexeo:white",
+                "betzold_flexeo:yellow",
+                "betzold_flexeo:red",
+                "betzold_flexeo:green",
+                "betzold_flexeo:blue"
+            ]
+        }
+    ],
+    "onUpdate": "
+        if (isnull(inited)) {
+            inited = true;
+            wallthickness = 19;
+            totalHeight = 888;
+            legHeight = 65;
+            width = 335;
+            depth = 480 - wallthickness;
+
+            elementType = 'shelf';
+        }
+    ",
+    "geometry": "
+        AddCube(Vector3f{width, depth - 20, wallthickness});
+         SetObjSurface(materialShelf);
+         RotateUvMatrixBy(90);
+
+        AddExternalMesh('betzold_flexeo:flexeo_1_EK_Teile_FB_Metall_low', Vector3f{380, -335, 10}, Vector3f{ -190, 167, 0});
+         RotateMatrixBy(Vector3f{0, 0, 1}, Vector3f{0, 0, 0}, 90);
+         MoveMatrixBy(Vector3f{width / 2, depth / 2 - 15, wallthickness / 2});
+         SetObjSurface('betzold_flexeo:metal');
+    ",
+    "childDockings": {
+        "points": [
+            {
+                "mask": "interiorParts",
+                "position": "{0, 0, 0}",
+                "collisionCondition": "
+                    for (_.i = 0; _.i < length(collidingComponentIDs); _.i++) {
+                        _.runtimeIdOfCollidingComponent = get(collidingComponentIDs, _.i);
+                        _.externalIdOfCollidingComponent = getComponentProperty('externalId', _.runtimeIdOfCollidingComponent);
+
+                        if (in(_.externalIdOfCollidingComponent, 'flexeo_box') || in(_.externalIdOfCollidingComponent, 'flexeo_shelf')) {
+                            return false;
+                        }
+                    }
+                    return true;
+                "
+            }
+        ]
+    },
+    "articleNr": "'betzold_flexeo:flexeo_shelf'"
+}

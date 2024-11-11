@@ -1,0 +1,836 @@
+{
+    "id": "betzold_flexeo:flexeo_master",
+    "parameters": [
+        {
+            "key": "material",
+            "type": "Material",
+            "global": true,
+            "labels": {
+                "en": "Wood decor",
+                "de": "Holzdekor"
+            },
+            "sort": 1,
+            "visible": true,
+            "validValues": [
+                "betzold_flexeo:beech",
+                "betzold_flexeo:oak",
+                "betzold_flexeo:maple",
+                "betzold_flexeo:beech_dark",
+                "betzold_flexeo:grey",
+                "betzold_flexeo:white",
+                "betzold_flexeo:yellow",
+                "betzold_flexeo:red",
+                "betzold_flexeo:green",
+                "betzold_flexeo:blue"
+            ]
+        },
+        {
+            "key": "corpusCount",
+            "type": "Integer",
+            "global": true,
+            "labels": {
+                "en": "Corpus count",
+                "de": "Anzahl Korpus"
+            },
+            "visible": true,
+            "validValues": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        {
+            "key": "footType",
+            "type": "String",
+            "global": true,
+            "labels": {
+                "en": "Foot type",
+                "de": "Stellart"
+            },
+            "visible": true,
+            "valueObjects": [
+                {
+                    "value": "wheels",
+                    "labels": {
+                        "en": "Wheels",
+                        "de": "Rollen"
+                    },
+                    "condition": "true"
+                },
+                {
+                    "value": "stand",
+                    "labels": {
+                        "en": "Stand",
+                        "de": "Stellfüße"
+                    },
+                    "condition": "true"
+                },
+                {
+                    "value": "socket",
+                    "labels": {
+                        "en": "Socket",
+                        "de": "Sockel"
+                    },
+                    "condition": "true"
+                }
+            ]
+        },
+        {
+            "key": "interiorSet1",
+            "type": "String",
+            "global": true,
+            "labels": {
+                "en": "Interior corpus 1",
+                "de": "Innenaustattung Korpus 1"
+            },
+            "visible": true,
+            "valueObjects": [
+                {
+                    "value": "none",
+                    "labels": {
+                        "en": "None",
+                        "de": "Keine"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/750a731c-a10f-4c92-b5c3-62d4a7b01219/itemAdditionalContents/f56c049b-1733-42fc-8d01-e4351a6578a6/2222628-200.png?marker=1701264102"
+                },
+                {
+                    "value": "set1",
+                    "labels": {
+                        "en": "Set 1",
+                        "de": "Set 1"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set_1/perspectiveImage.png?marker=1729721311"
+                },
+                {
+                    "value": "set2",
+                    "labels": {
+                        "en": "Set 2",
+                        "de": "Set 2"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set2/perspectiveImage.png?marker=1729721320"
+                },
+                {
+                    "value": "set3",
+                    "labels": {
+                        "en": "Set 3",
+                        "de": "Set 3"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set3/perspectiveImage.png?marker=1729721302"
+                },
+                {
+                    "value": "set4",
+                    "labels": {
+                        "en": "Set 4",
+                        "de": "Set 4"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set4/perspectiveImage.png?marker=1729721293"
+                },
+                {
+                    "value": "set5",
+                    "labels": {
+                        "en": "Set 5",
+                        "de": "Set 5"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set5/perspectiveImage.png?marker=1729721252"
+                }
+            ],
+            "onValueChange": "
+                if (parameter.userTriggeredChange) {
+                    set(interiorSetChanged, 0, 1);
+                }
+            "
+        },
+        {
+            "key": "interiorSet2",
+            "type": "String",
+            "global": true,
+            "labels": {
+                "en": "Interior corpus 2",
+                "de": "Innenaustattung Korpus 2"
+            },
+            "visible": "corpusCount >= 2",
+            "visibleAsGlobal": "corpusCount >= 2",
+            "valueObjects": [
+                {
+                    "value": "none",
+                    "labels": {
+                        "en": "None",
+                        "de": "Keine"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/750a731c-a10f-4c92-b5c3-62d4a7b01219/itemAdditionalContents/f56c049b-1733-42fc-8d01-e4351a6578a6/2222628-200.png?marker=1701264102"
+                },
+                {
+                    "value": "set1",
+                    "labels": {
+                        "en": "Set 1",
+                        "de": "Set 1"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set_1/perspectiveImage.png?marker=1729721311"
+                },
+                {
+                    "value": "set2",
+                    "labels": {
+                        "en": "Set 2",
+                        "de": "Set 2"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set2/perspectiveImage.png?marker=1729721320"
+                },
+                {
+                    "value": "set3",
+                    "labels": {
+                        "en": "Set 3",
+                        "de": "Set 3"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set3/perspectiveImage.png?marker=1729721302"
+                },
+                {
+                    "value": "set4",
+                    "labels": {
+                        "en": "Set 4",
+                        "de": "Set 4"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set4/perspectiveImage.png?marker=1729721293"
+                },
+                {
+                    "value": "set5",
+                    "labels": {
+                        "en": "Set 5",
+                        "de": "Set 5"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set5/perspectiveImage.png?marker=1729721252"
+                }
+            ],
+            "onValueChange": "
+                if (parameter.userTriggeredChange) {
+                    set(interiorSetChanged, 1, 1);
+                }
+            "
+        },
+        {
+            "key": "interiorSet3",
+            "type": "String",
+            "global": true,
+            "labels": {
+                "en": "Interior corpus 3",
+                "de": "Innenaustattung Korpus 3"
+            },
+            "visible": "corpusCount >= 3",
+            "visibleAsGlobal": "corpusCount >= 3",
+            "valueObjects": [
+                {
+                    "value": "none",
+                    "labels": {
+                        "en": "None",
+                        "de": "Keine"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/750a731c-a10f-4c92-b5c3-62d4a7b01219/itemAdditionalContents/f56c049b-1733-42fc-8d01-e4351a6578a6/2222628-200.png?marker=1701264102"
+                },
+                {
+                    "value": "set1",
+                    "labels": {
+                        "en": "Set 1",
+                        "de": "Set 1"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set_1/perspectiveImage.png?marker=1729721311"
+                },
+                {
+                    "value": "set2",
+                    "labels": {
+                        "en": "Set 2",
+                        "de": "Set 2"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set2/perspectiveImage.png?marker=1729721320"
+                },
+                {
+                    "value": "set3",
+                    "labels": {
+                        "en": "Set 3",
+                        "de": "Set 3"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set3/perspectiveImage.png?marker=1729721302"
+                },
+                {
+                    "value": "set4",
+                    "labels": {
+                        "en": "Set 4",
+                        "de": "Set 4"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set4/perspectiveImage.png?marker=1729721293"
+                },
+                {
+                    "value": "set5",
+                    "labels": {
+                        "en": "Set 5",
+                        "de": "Set 5"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set5/perspectiveImage.png?marker=1729721252"
+                }
+            ],
+            "onValueChange": "
+                if (parameter.userTriggeredChange) {
+                    set(interiorSetChanged, 2, 1);
+                }
+            "
+        },
+        {
+            "key": "interiorSet4",
+            "type": "String",
+            "global": true,
+            "labels": {
+                "en": "Interior corpus 4",
+                "de": "Innenaustattung Korpus 4"
+            },
+            "visible": "corpusCount >= 4",
+            "visibleAsGlobal": "corpusCount >= 4",
+            "valueObjects": [
+                {
+                    "value": "none",
+                    "labels": {
+                        "en": "None",
+                        "de": "Keine"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/750a731c-a10f-4c92-b5c3-62d4a7b01219/itemAdditionalContents/f56c049b-1733-42fc-8d01-e4351a6578a6/2222628-200.png?marker=1701264102"
+                },
+                {
+                    "value": "set1",
+                    "labels": {
+                        "en": "Set 1",
+                        "de": "Set 1"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set_1/perspectiveImage.png?marker=1729721311"
+                },
+                {
+                    "value": "set2",
+                    "labels": {
+                        "en": "Set 2",
+                        "de": "Set 2"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set2/perspectiveImage.png?marker=1729721320"
+                },
+                {
+                    "value": "set3",
+                    "labels": {
+                        "en": "Set 3",
+                        "de": "Set 3"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set3/perspectiveImage.png?marker=1729721302"
+                },
+                {
+                    "value": "set4",
+                    "labels": {
+                        "en": "Set 4",
+                        "de": "Set 4"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set4/perspectiveImage.png?marker=1729721293"
+                },
+                {
+                    "value": "set5",
+                    "labels": {
+                        "en": "Set 5",
+                        "de": "Set 5"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set5/perspectiveImage.png?marker=1729721252"
+                }
+            ],
+            "onValueChange": "
+                if (parameter.userTriggeredChange) {
+                    set(interiorSetChanged, 3, 1);
+                }
+            "
+        },
+        {
+            "key": "interiorSet5",
+            "type": "String",
+            "global": true,
+            "labels": {
+                "en": "Interior corpus 5",
+                "de": "Innenaustattung Korpus 5"
+            },
+            "visible": "corpusCount >= 5",
+            "visibleAsGlobal": "corpusCount >= 5",
+            "valueObjects": [
+                {
+                    "value": "none",
+                    "labels": {
+                        "en": "None",
+                        "de": "Keine"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/750a731c-a10f-4c92-b5c3-62d4a7b01219/itemAdditionalContents/f56c049b-1733-42fc-8d01-e4351a6578a6/2222628-200.png?marker=1701264102"
+                },
+                {
+                    "value": "set1",
+                    "labels": {
+                        "en": "Set 1",
+                        "de": "Set 1"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set_1/perspectiveImage.png?marker=1729721311"
+                },
+                {
+                    "value": "set2",
+                    "labels": {
+                        "en": "Set 2",
+                        "de": "Set 2"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set2/perspectiveImage.png?marker=1729721320"
+                },
+                {
+                    "value": "set3",
+                    "labels": {
+                        "en": "Set 3",
+                        "de": "Set 3"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set3/perspectiveImage.png?marker=1729721302"
+                },
+                {
+                    "value": "set4",
+                    "labels": {
+                        "en": "Set 4",
+                        "de": "Set 4"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set4/perspectiveImage.png?marker=1729721293"
+                },
+                {
+                    "value": "set5",
+                    "labels": {
+                        "en": "Set 5",
+                        "de": "Set 5"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set5/perspectiveImage.png?marker=1729721252"
+                }
+            ],
+            "onValueChange": "
+                if (parameter.userTriggeredChange) {
+                    set(interiorSetChanged, 4, 1);
+                }
+            "
+        }
+    ],
+    "onUpdate": "
+        if (isnull(inited)) {
+            inited = true;
+            wallthickness = 19;
+            totalHeight = 888 + (wallthickness * 2);
+            legHeight = 65;
+            width = 335;
+            depth = 480;
+
+            stepSize = 224 / 2;
+
+            interiorArray = [0, 0, 0, 0, 0];
+            interiorArrayDockedCount = [0, 0, 0, 0, 0];
+            interiorArrayDoorDocked = [0, 0, 0, 0, 0];
+
+            interiorSetChanged = [0, 0, 0, 0, 0];
+            interiorDeleteAll = [0, 0, 0, 0, 0];
+            interiorDeleteDoor = [0, 0, 0, 0, 0];
+
+            socketHeight = 65;
+        }
+
+        for (_.i = 0; _.i < 5; _.i = _.i + 1) {
+            if (get(interiorSetChanged, _.i) == 1) {
+                if (get(interiorArrayDockedCount, _.i) > 0 || get(interiorArrayDoorDocked, _.i) == 1) {
+                    if (get(interiorArrayDoorDocked, _.i) == 1) {
+                        set(interiorDeleteDoor, _.i, 1);
+                    }
+                    else {
+                        set(interiorDeleteAll, _.i, 1);
+                    }
+                }
+                else {
+                    set(interiorDeleteAll, _.i, 0);
+                    set(interiorDeleteDoor, _.i, 0);
+                    set(interiorSetChanged, _.i, 0);
+                    if (_.i == 0) {
+                        interiorSetValue = interiorSet1;
+                    }
+                    if (_.i == 1) {
+                        interiorSetValue = interiorSet2;
+                    }
+                    if (_.i == 2) {
+                        interiorSetValue = interiorSet3;
+                    }
+                    if (_.i == 3) {
+                        interiorSetValue = interiorSet4;
+                    }
+                    if (_.i == 4) {
+                        interiorSetValue = interiorSet5;
+                    }
+                    if (interiorSetValue == 'set1') {
+                        requestDockItem('{\"componentId\": \"betzold_flexeo:flexeo_shelf\"}', Vector3f{wallthickness + (width + wallthickness) * _.i, wallthickness, wallthickness + stepSize * 4}, Vector3f{0, 0, 0});
+                        requestDockItem('{\"componentId\": \"betzold_flexeo:flexeo_shelf\"}', Vector3f{wallthickness + (width + wallthickness) * _.i, wallthickness, wallthickness + stepSize * 6}, Vector3f{0, 0, 0});
+                        requestDockItem('{\"componentId\": \"betzold_flexeo:flexeo_box\"}', Vector3f{wallthickness + (width + wallthickness) * _.i, wallthickness, wallthickness + stepSize}, Vector3f{0, 0, 0});
+                        requestDockItem('{\"componentId\": \"betzold_flexeo:flexeo_box\"}', Vector3f{wallthickness + (width + wallthickness) * _.i, wallthickness, wallthickness + stepSize * 3}, Vector3f{0, 0, 0});
+                    }
+                    if (interiorSetValue == 'set2') {
+                        requestDockItem('{\"componentId\": \"betzold_flexeo:flexeo_shelf\"}', Vector3f{wallthickness + (width + wallthickness) * _.i, wallthickness, wallthickness + stepSize * 2}, Vector3f{0, 0, 0});
+                        requestDockItem('{\"componentId\": \"betzold_flexeo:flexeo_shelf\"}', Vector3f{wallthickness + (width + wallthickness) * _.i, wallthickness, wallthickness + stepSize * 6}, Vector3f{0, 0, 0});
+                        requestDockItem('{\"componentId\": \"betzold_flexeo:flexeo_box\"}', Vector3f{wallthickness + (width + wallthickness) * _.i, wallthickness, wallthickness + stepSize}, Vector3f{0, 0, 0});
+                        requestDockItem('{\"componentId\": \"betzold_flexeo:flexeo_box\"}', Vector3f{wallthickness + (width + wallthickness) * _.i, wallthickness, wallthickness + stepSize * 5}, Vector3f{0, 0, 0});
+                    }
+                    if (interiorSetValue == 'set3') {
+                        requestDockItem('{\"componentId\": \"betzold_flexeo:flexeo_shelf\"}', Vector3f{wallthickness + (width + wallthickness) * _.i, wallthickness, wallthickness + stepSize * 4}, Vector3f{0, 0, 0});
+                        requestDockItem('{\"componentId\": \"betzold_flexeo:flexeo_shelf\"}', Vector3f{wallthickness + (width + wallthickness) * _.i, wallthickness, wallthickness + stepSize * 6}, Vector3f{0, 0, 0});
+                        requestDockItem('{\"componentId\": \"betzold_flexeo:flexeo_shelf\"}', Vector3f{wallthickness + (width + wallthickness) * _.i, wallthickness, wallthickness + stepSize * 2}, Vector3f{0, 0, 0});
+                        requestDockItem('{\"componentId\": \"betzold_flexeo:flexeo_door\"}', Vector3f{wallthickness + (width + wallthickness) * _.i, depth, wallthickness}, Vector3f{0, 0, 0});
+                    }
+                    if (interiorSetValue == 'set4') {
+                        requestDockItem('{\"componentId\": \"betzold_flexeo:flexeo_shelf\"}', Vector3f{wallthickness + (width + wallthickness) * _.i, wallthickness, wallthickness + stepSize * 4}, Vector3f{0, 0, 0});
+                        requestDockItem('{\"componentId\": \"betzold_flexeo:flexeo_shelf\"}', Vector3f{wallthickness + (width + wallthickness) * _.i, wallthickness, wallthickness + stepSize * 6}, Vector3f{0, 0, 0});
+                        requestDockItem('{\"componentId\": \"betzold_flexeo:flexeo_shelf\"}', Vector3f{wallthickness + (width + wallthickness) * _.i, wallthickness, wallthickness + stepSize * 2}, Vector3f{0, 0, 0});
+                    }
+                    if (interiorSetValue == 'set5') {
+                        requestDockItem('{\"componentId\": \"betzold_flexeo:flexeo_box\"}', Vector3f{wallthickness + (width + wallthickness) * _.i, wallthickness, wallthickness + stepSize}, Vector3f{0, 0, 0});
+                        requestDockItem('{\"componentId\": \"betzold_flexeo:flexeo_box\"}', Vector3f{wallthickness + (width + wallthickness) * _.i, wallthickness, wallthickness + stepSize * 3}, Vector3f{0, 0, 0});
+                        requestDockItem('{\"componentId\": \"betzold_flexeo:flexeo_box\"}', Vector3f{wallthickness + (width + wallthickness) * _.i, wallthickness, wallthickness + stepSize * 5}, Vector3f{0, 0, 0});
+                        requestDockItem('{\"componentId\": \"betzold_flexeo:flexeo_box\"}', Vector3f{wallthickness + (width + wallthickness) * _.i, wallthickness, wallthickness + stepSize * 7}, Vector3f{0, 0, 0});
+                    }
+                }
+            }
+        }
+    ",
+    "geometry": "
+        if (footType == 'socket') {
+            AddCube(Vector3f{wallthickness, depth, totalHeight - wallthickness + socketHeight});
+             MoveMatrixBy(Vector3f{0, 0, -socketHeight});
+
+        }
+        else {
+            AddCube(Vector3f{wallthickness, depth, totalHeight - wallthickness * 2});
+             MoveMatrixBy(Vector3f{0, 0, wallthickness});
+        }
+         SetObjSurface(material);
+
+
+        for (_.i = 0; _.i < corpusCount; _.i = _.i + 1) {
+            BeginObjGroup('REPEAT_COPRUS');
+                if (footType == 'socket' && _.i == corpusCount - 1) {
+                    AddCube(Vector3f{wallthickness, depth, totalHeight - wallthickness + socketHeight});
+                     MoveMatrixBy(Vector3f{0, 0, -socketHeight});
+
+                }
+                else {
+                    AddCube(Vector3f{wallthickness, depth, totalHeight - wallthickness * 2});
+                     MoveMatrixBy(Vector3f{0, 0, wallthickness});
+                }
+                 SetObjSurface(material);
+                 MoveMatrixBy(Vector3f{width + wallthickness, 0, 0});
+                AddCube(Vector3f{width, wallthickness / 2, totalHeight - wallthickness * 2});
+                 MoveMatrixBy(Vector3f{wallthickness, wallthickness / 2, wallthickness});
+                 SetObjSurface(material);
+            EndObjGroup('REPEAT_COPRUS');
+             MoveMatrixBy(Vector3f{(width + wallthickness) * _.i, 0, 0});
+        }
+
+        if (footType == 'socket') {
+            AddCube(Vector3f{width * corpusCount + (corpusCount - 1) * wallthickness, depth, wallthickness});
+             MoveMatrixBy(Vector3f{wallthickness, 0, 0});
+             SetObjSurface(material);
+             RotateUvMatrixBy(90);
+
+            AddCube(Vector3f{width * corpusCount + (corpusCount - 1) * wallthickness, wallthickness, socketHeight});
+             SetObjSurface(material);
+             RotateUvMatrixBy(90);
+             MoveMatrixBy(Vector3f{wallthickness, wallthickness / 2, -socketHeight});
+            Copy();
+             MoveMatrixBy(Vector3f{0, depth - wallthickness * 2, 0});
+        }
+        else {
+            AddCube(Vector3f{width * corpusCount + (corpusCount + 1) * wallthickness, depth, wallthickness});
+             SetObjSurface(material);
+             RotateUvMatrixBy(90);
+        }
+
+        AddCube(Vector3f{width * corpusCount + (corpusCount + 1) * wallthickness, depth, wallthickness});
+         SetObjSurface(material);
+         RotateUvMatrixBy(90);
+         MoveMatrixBy(Vector3f{0, 0, totalHeight - wallthickness});
+
+
+        if (footType == 'wheels') {
+            BeginObjGroup('FEET');
+                AddExternalMesh('betzold_flexeo:flexeo_1_EK_Teile_Rolle', Vector3f{62, -48, 68}, Vector3f{ -31, 24, 0});
+                 SetObjSurface('ral_color:9004');
+                 MoveMatrixBy(Vector3f{5, 30, 0});
+                Copy();
+                 MoveMatrixBy(Vector3f{width * corpusCount + (corpusCount + 1) * wallthickness - 50, 0, 0});
+                AddExternalMesh('betzold_flexeo:flexeo_1_EK_Teile_Rolle_Bremse', Vector3f{73, -48, 68}, Vector3f{ -37, 24, 0});
+                 SetObjSurface('ral_color:9004');
+                 MoveMatrixBy(Vector3f{5, depth - 30, 0});
+                Copy();
+                 MoveMatrixBy(Vector3f{width * corpusCount + (corpusCount + 1) * wallthickness - 50, 0, 0});
+
+            EndObjGroup('FEET');
+             MoveMatrixBy(Vector3f{0, 0, -legHeight / 2});
+        }
+        else if (footType == 'stand') {
+            BeginObjGroup('FEET');
+                AddExternalMesh('betzold_flexeo:flexeo_1_EK_Teile_Fu', Vector3f{60, -60, 65}, Vector3f{ -30, 30, 0});
+                 SetObjSurface('ral_color:9004');
+                 MoveMatrixBy(Vector3f{30, 30, 0});
+                Copy();
+                 MoveMatrixBy(Vector3f{width * corpusCount + (corpusCount + 1) * wallthickness - 60, 0, 0});
+                Copy();
+                 MoveMatrixBy(Vector3f{0, depth - 60, 0});
+                Copy();
+                 MoveMatrixBy(Vector3f{ -width * corpusCount - (corpusCount + 1) * wallthickness + 60, 0, 0});
+            EndObjGroup('FEET');
+             MoveMatrixBy(Vector3f{0, 0, -18});
+        }
+    ",
+    "parentDockings": {
+        "ranges": [
+            {
+                "mask": "interior",
+                "position": "{wallthickness, wallthickness, wallthickness}",
+                "rotation": "{0, 0, 0}",
+                "stepEnd": "{(width + wallthickness) * 5, wallthickness, wallthickness}",
+                "stepX": "width + wallthickness",
+                "condition": "
+                    _.index = (round(xFromVector(connection.position) / (width + wallthickness), 0));
+                    if (_.index > corpusCount - 1) {
+                        condition = false;
+                    }
+                    else {
+                        condition = true;
+                    }
+                ",
+                "assignmentScripts": {
+                    "onDock": "
+                        _.index = (round(xFromVector(connection.position) / (width + wallthickness), 0));
+                        if (other.interiorType == 'typ3') {
+                            set(interiorArray, _.index, 2);
+                        }
+                        else {
+                            set(interiorArray, _.index, 1);
+                        }
+                        other.materialShelf = self.material;
+
+                        if (_.index != 0 && (get(interiorArrayDoorDocked, _.index - 1) == 1 || get(interiorArray, _.index - 1) == 2)) {
+                            other.directionRightEnabled = false;
+                        }
+                        else {
+                            other.directionRightEnabled = true;
+                        }
+                        if (_.index < 4 && get(interiorArrayDoorDocked, _.index + 1) == 1) {
+                            other.directionLeftEnabled = false;
+                        }
+                        else {
+                            other.directionLeftEnabled = true;
+                        }
+                    ",
+                    "onUpdate": "
+                        _.index = (round(xFromVector(connection.position) / (width + wallthickness), 0));
+                        if (other.interiorType == 'typ3') {
+                            set(interiorArray, _.index, 2);
+                        }
+                        else {
+                            set(interiorArray, _.index, 1);
+                        }
+
+                        if (_.index != 0 && (get(interiorArrayDoorDocked, _.index - 1) == 1 || get(interiorArray, _.index - 1) == 2)) {
+                            other.directionRightEnabled = false;
+                        }
+                        else {
+                            other.directionRightEnabled = true;
+                        }
+                        if (_.index < 4 && get(interiorArrayDoorDocked, _.index + 1) == 1) {
+                            other.directionLeftEnabled = false;
+                        }
+                        else {
+                            other.directionLeftEnabled = true;
+                        }
+                    ",
+                    "onUnDock": "
+                        _.index = (round(xFromVector(connection.position) / (width + wallthickness), 0));
+                        set(interiorArray, _.index, 0);
+                    "
+                },
+                "persistent": false
+            },
+            {
+                "mask": "interiorDoor",
+                "position": "{wallthickness, depth, wallthickness}",
+                "rotation": "{0, 0, 0}",
+                "stepEnd": "{(width + wallthickness) * 5, wallthickness, wallthickness}",
+                "stepX": "width + wallthickness",
+                "condition": "
+                    condition = true;
+                    _.index = (round(xFromVector(connection.position) / (width + wallthickness), 0));
+
+
+                    if (get(interiorArray, _.index) > 0) {
+                        condition = false;
+                    }
+
+                    if (_.index > corpusCount - 1) {
+                        condition = false;
+                    }
+
+                    if (get(interiorDeleteDoor, _.index) == 1) {
+                        condition = false;
+                    }
+
+                    if (_.index != 0 && (get(interiorArrayDoorDocked, _.index - 1) == 1 || get(interiorArray, _.index - 1) == 2) && other.direction == 'right') {
+                        condition = false;
+                    }
+
+                    if (_.index < 4 && get(interiorArrayDoorDocked, _.index + 1) == 1 && other.direction == 'left') {
+                        condition = false;
+                    }
+                ",
+                "assignmentScripts": {
+                    "onDock": "
+                        _.index = (round(xFromVector(connection.position) / (width + wallthickness), 0));
+                        set(interiorArrayDoorDocked, _.index, 1);
+                        other.materialShelf = self.material;
+
+                        if (_.index != 0 && (get(interiorArrayDoorDocked, _.index - 1) == 1 || get(interiorArray, _.index - 1) == 2)) {
+                            other.directionRightEnabled = false;
+                        }
+                        else {
+                            other.directionRightEnabled = true;
+                        }
+                        if (_.index < 4 && get(interiorArrayDoorDocked, _.index + 1) == 1) {
+                            other.directionLeftEnabled = false;
+                        }
+                        else {
+                            other.directionLeftEnabled = true;
+                        }
+                    ",
+                    "onUpdate": "
+                        _.index = (round(xFromVector(connection.position) / (width + wallthickness), 0));
+                        if (_.index != 0 && (get(interiorArrayDoorDocked, _.index - 1) == 1 || get(interiorArray, _.index - 1) == 2)) {
+                            other.directionRightEnabled = false;
+                        }
+                        else {
+                            other.directionRightEnabled = true;
+                        }
+                        if (_.index < 4 && get(interiorArrayDoorDocked, _.index + 1) == 1) {
+                            other.directionLeftEnabled = false;
+                        }
+                        else {
+                            other.directionLeftEnabled = true;
+                        }
+                    ",
+                    "onUnDock": "
+                        _.index = (round(xFromVector(connection.position) / (width + wallthickness), 0));
+                        set(interiorArrayDoorDocked, _.index, 0);
+                    "
+                },
+                "persistent": false
+            },
+            {
+                "mask": "interiorParts",
+                "position": "{wallthickness, wallthickness, wallthickness + stepSize}",
+                "rotation": "{0, 0, 0}",
+                "stepEnd": "{(width + wallthickness) * 5, wallthickness, totalHeight - wallthickness}",
+                "stepX": "width + wallthickness",
+                "stepZ": "stepSize",
+                "condition": "
+                    condition = true;
+                    _.indexZ = (round(zFromVector(connection.position) / stepSize, 0));
+                    _.indexX = (round(xFromVector(connection.position) / (width + wallthickness), 0));
+                    if (fmod(_.indexZ, 2) == 0 && other.elementType == 'box') {
+                        condition = false;
+                    }
+
+                    if (_.indexX > corpusCount - 1) {
+                        condition = false;
+                    }
+
+                    if (get(interiorArray, _.indexX) > 0) {
+                        condition = false;
+                    }
+
+                    if (get(interiorDeleteAll, _.indexX) == 1) {
+                        condition = false;
+                    }
+                ",
+                "assignmentScripts": {
+                    "onDock": "
+                        _.indexX = (round(xFromVector(connection.position) / (width + wallthickness), 0));
+                        set(interiorArrayDockedCount, _.indexX, get(interiorArrayDockedCount, _.indexX) + 1);
+                        other.materialShelf = self.material;
+                    ",
+                    "onUnDock": "
+                        _.indexX = (round(xFromVector(connection.position) / (width + wallthickness), 0));
+                        set(interiorArrayDockedCount, _.indexX, get(interiorArrayDockedCount, _.indexX) - 1);
+                    "
+                },
+                "persistent": false
+            }
+        ]
+    },
+    "possibleChildren": [
+        {
+            "itemId": "betzold_flexeo:interior_set_1",
+            "condition": "true"
+        },
+        {
+            "itemId": "betzold_flexeo:interior_set2",
+            "condition": "true"
+        },
+        {
+            "itemId": "betzold_flexeo:interior_set3",
+            "condition": "true"
+        },
+        {
+            "itemId": "betzold_flexeo:interior_set4",
+            "condition": "true"
+        },
+        {
+            "itemId": "betzold_flexeo:interior_set5",
+            "condition": "true"
+        },
+        {
+            "itemId": "betzold_flexeo:interior_shelf",
+            "condition": "true"
+        },
+        {
+            "itemId": "betzold_flexeo:interior_box",
+            "condition": "true"
+        },
+        {
+            "itemId": "betzold_flexeo:interior_door",
+            "condition": "true"
+        },
+        {
+            "itemId": "betzold_flexeo:interior_door_left",
+            "condition": "true"
+        }
+    ],
+    "articleNr": "'betzold_flexeo:flexeo_master'"
+}

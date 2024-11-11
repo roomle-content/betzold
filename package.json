@@ -1,0 +1,27 @@
+{
+  "name": "betzold",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx rubens-cli dev",
+    "build": "npx rubens-cli build",
+    "test": "npx rubens-cli test",
+    "create": "npx rubens-cli create"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/roomle/web/create-rubens-content.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/roomle/web/create-rubens-content/issues"
+  },
+  "homepage": "https://gitlab.com/roomle/web/create-rubens-content#readme",
+  "devDependencies": {
+    "@roomle/rubens-cli": "1.7.0",
+    "@playwright/test": "1.20.2",
+    "http-server": "13.0.1"
+  }
+}

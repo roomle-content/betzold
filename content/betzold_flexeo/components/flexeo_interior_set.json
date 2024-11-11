@@ -1,0 +1,282 @@
+{
+    "id": "betzold_flexeo:flexeo_interior_set",
+    "parameters": [
+        {
+            "key": "materialShelf",
+            "type": "Material",
+            "global": true,
+            "labels": {
+                "en": "Material Interior",
+                "de": "Material Innenaustattung"
+            },
+            "sort": 1,
+            "visible": true,
+            "validValues": [
+                "betzold_flexeo:beech",
+                "betzold_flexeo:oak",
+                "betzold_flexeo:maple",
+                "betzold_flexeo:beech_dark",
+                "betzold_flexeo:grey",
+                "betzold_flexeo:white",
+                "betzold_flexeo:yellow",
+                "betzold_flexeo:red",
+                "betzold_flexeo:green",
+                "betzold_flexeo:blue"
+            ]
+        },
+        {
+            "key": "materialBoxes",
+            "type": "Material",
+            "global": true,
+            "labels": {
+                "en": "Material Box",
+                "de": "Material Box"
+            },
+            "sort": 1,
+            "visible": true,
+            "validValues": [
+                "betzold_flexeo:box_yellow",
+                "betzold_flexeo:box_orange",
+                "betzold_flexeo:box_light_greem",
+                "betzold_flexeo:box_dark_green",
+                "betzold_flexeo:box_light_blue",
+                "betzold_flexeo:box_dark_blue",
+                "betzold_flexeo:box_transparent"
+            ]
+        },
+        {
+            "key": "interiorType",
+            "type": "String",
+            "labels": {
+                "en": "Interior sets",
+                "de": "Innenaustattung Sets"
+            },
+            "visible": true,
+            "valueObjects": [
+                {
+                    "value": "typ1",
+                    "labels": {
+                        "en": "Set 1",
+                        "de": "Set 1"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set_1/perspectiveImage.png?marker=1729721311"
+                },
+                {
+                    "value": "typ2",
+                    "labels": {
+                        "en": "Set 2",
+                        "de": "Set 2"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set2/perspectiveImage.png?marker=1729721320"
+                },
+                {
+                    "value": "typ3",
+                    "labels": {
+                        "en": "Set 3",
+                        "de": "Set 3"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set3/perspectiveImage.png?marker=1729721302"
+                },
+                {
+                    "value": "typ4",
+                    "labels": {
+                        "en": "Set 4",
+                        "de": "Set 4"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set4/perspectiveImage.png?marker=1729721293"
+                },
+                {
+                    "value": "typ5",
+                    "labels": {
+                        "en": "Set 5",
+                        "de": "Set 5"
+                    },
+                    "condition": "true",
+                    "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set5/perspectiveImage.png?marker=1729721252"
+                }
+            ]
+        },
+        {
+            "key": "direction",
+            "type": "String",
+            "labels": {
+                "en": "Door opening direction",
+                "de": "Türausrichtung"
+            },
+            "visible": true,
+            "valueObjects": [
+                {
+                    "value": "right",
+                    "labels": {
+                        "en": "Right",
+                        "de": "Rechts"
+                    },
+                    "condition": "directionRightEnabled"
+                },
+                {
+                    "value": "left",
+                    "labels": {
+                        "en": "Left",
+                        "de": "Links"
+                    },
+                    "condition": "directionLeftEnabled"
+                }
+            ]
+        }
+    ],
+    "animations": [
+        {
+            "key": "view",
+            "labels": {
+                "en": "View",
+                "de": "Ansicht"
+            },
+            "actions": [
+                {
+                    "labels": {
+                        "en": "Open",
+                        "de": "Offen"
+                    },
+                    "key": "open",
+                    "type": "matrix"
+                },
+                {
+                    "labels": {
+                        "en": "Closed",
+                        "de": "Geschlossen"
+                    },
+                    "key": "closed",
+                    "type": "origin"
+                }
+            ]
+        }
+    ],
+    "subComponents": [
+        {
+            "internalId": "BOX",
+            "componentId": "betzold_flexeo:flexeo_box",
+            "assignments": {
+                "materialBoxes": "materialBoxes"
+            }
+        },
+        {
+            "internalId": "SHELF",
+            "componentId": "betzold_flexeo:flexeo_shelf",
+            "assignments": {
+                "materialShelf": "materialShelf"
+            }
+        },
+        {
+            "internalId": "DOOR",
+            "componentId": "betzold_flexeo:flexeo_door",
+            "assignments": {
+                "direction": "direction",
+                "materialShelf": "materialShelf",
+                "view": "view"
+            }
+        }
+    ],
+    "onUpdate": "
+        if (isnull(inited)) {
+            inited = true;
+            wallthickness = 19;
+            totalHeight = 888;
+            legHeight = 65;
+            width = 335;
+            depth = 480 - wallthickness;
+
+            stepSizeFirst = 224;
+            stepSize = 224;
+
+            directionRightEnabled = true;
+            directionLeftEnabled = true;
+        }
+    ",
+    "boundingGeometry": "
+        if (interiorType == 'typ3') {
+            SubComponent('DOOR');
+             MoveMatrixBy(Vector3f{0, depth, 0});
+
+        }
+        else {
+            AddCube(Vector3f{1, 1, 1});
+        }
+    ",
+    "geometry": "
+        if (interiorType == 'typ1') {
+            SubComponent('SHELF');
+             MoveMatrixBy(Vector3f{0, 0, stepSizeFirst + stepSize});
+            Copy();
+             MoveMatrixBy(Vector3f{0, 0, stepSize});
+
+            SubComponent('BOX');
+             MoveMatrixBy(Vector3f{0, 0, 37});
+            Copy();
+             MoveMatrixBy(Vector3f{0, 0, stepSizeFirst});
+        }
+
+        if (interiorType == 'typ2') {
+            SubComponent('SHELF');
+             MoveMatrixBy(Vector3f{0, 0, stepSizeFirst});
+            Copy();
+             MoveMatrixBy(Vector3f{0, 0, stepSize * 2});
+
+            SubComponent('BOX');
+             MoveMatrixBy(Vector3f{0, 0, 37});
+            Copy();
+             MoveMatrixBy(Vector3f{0, 0, stepSizeFirst + stepSize});
+        }
+
+        if (interiorType == 'typ3' || interiorType == 'typ4') {
+            SubComponent('SHELF');
+             MoveMatrixBy(Vector3f{0, 0, stepSizeFirst});
+            Copy();
+             MoveMatrixBy(Vector3f{0, 0, stepSize});
+
+            Copy();
+             MoveMatrixBy(Vector3f{0, 0, stepSize});
+
+            if (interiorType == 'typ3') {
+                SubComponent('DOOR');
+                 MoveMatrixBy(Vector3f{0, depth, 0});
+
+            }
+
+        }
+
+        if (interiorType == 'typ5') {
+            SubComponent('BOX');
+             MoveMatrixBy(Vector3f{0, 0, 37});
+            Copy();
+             MoveMatrixBy(Vector3f{0, 0, stepSizeFirst});
+            Copy();
+             MoveMatrixBy(Vector3f{0, 0, stepSize});
+            Copy();
+             MoveMatrixBy(Vector3f{0, 0, stepSize});
+        }
+    ",
+    "childDockings": {
+        "points": [
+            {
+                "mask": "interior",
+                "position": "{0, 0, 0}",
+                "collisionCondition": "
+                    for (_.i = 0; _.i < length(collidingComponentIDs); _.i++) {
+                        _.runtimeIdOfCollidingComponent = get(collidingComponentIDs, _.i);
+                        _.externalIdOfCollidingComponent = getComponentProperty('externalId', _.runtimeIdOfCollidingComponent);
+
+                        if (in(_.externalIdOfCollidingComponent, 'flexeo_door') || in(_.externalIdOfCollidingComponent, 'flexeo_interior_set')) {
+                            return false;
+                        }
+                    }
+                    return true;
+                "
+            }
+        ]
+    },
+    "articleNr": "'betzold_flexeo:flexeo_interior_set'"
+}

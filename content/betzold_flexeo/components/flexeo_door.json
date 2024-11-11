@@ -1,0 +1,173 @@
+{
+    "id": "betzold_flexeo:flexeo_door",
+    "parameters": [
+        {
+            "key": "materialShelf",
+            "type": "Material",
+            "global": true,
+            "labels": {
+                "en": "Material Interior",
+                "de": "Material Innenaustattung"
+            },
+            "visible": true,
+            "validValues": [
+                "betzold_flexeo:beech",
+                "betzold_flexeo:oak",
+                "betzold_flexeo:maple",
+                "betzold_flexeo:beech_dark",
+                "betzold_flexeo:grey",
+                "betzold_flexeo:white",
+                "betzold_flexeo:yellow",
+                "betzold_flexeo:red",
+                "betzold_flexeo:green",
+                "betzold_flexeo:blue"
+            ],
+            "onValueChange": "
+                // THE CURRENT ANIMATION FEATURE TRIGGERS ME HARD!!!!!
+                // Forcing a change trigger on the details meshes so the animation reset also applies to those when the door plane color changes
+                if (materialDetails == 'betzold_flexeo:metal') {
+                    materialDetails = 'betzold_flexeo:tbdbsbrcclrd7wg2jn7ag0ppe347r';
+                }
+                else {
+                    materialDetails = 'betzold_flexeo:metal';
+                }
+            "
+        },
+        {
+            "key": "direction",
+            "type": "String",
+            "labels": {
+                "en": "Door opening direction",
+                "de": "Türausrichtung"
+            },
+            "visible": true,
+            "valueObjects": [
+                {
+                    "value": "right",
+                    "labels": {
+                        "en": "Right",
+                        "de": "Rechts"
+                    },
+                    "condition": "directionRightEnabled"
+                },
+                {
+                    "value": "left",
+                    "labels": {
+                        "en": "Left",
+                        "de": "Links"
+                    },
+                    "condition": "directionLeftEnabled"
+                }
+            ]
+        }
+    ],
+    "animations": [
+        {
+            "key": "view",
+            "labels": {
+                "en": "View",
+                "de": "Ansicht"
+            },
+            "actions": [
+                {
+                    "labels": {
+                        "en": "Open",
+                        "de": "Offen"
+                    },
+                    "key": "open",
+                    "type": "matrix"
+                },
+                {
+                    "labels": {
+                        "en": "Closed",
+                        "de": "Geschlossen"
+                    },
+                    "key": "closed",
+                    "type": "origin"
+                }
+            ]
+        }
+    ],
+    "onUpdate": "
+        if (isnull(inited)) {
+            inited = true;
+            wallthickness = 19;
+            totalHeight = 888;
+            legHeight = 65;
+            width = 335;
+            depth = 480 - wallthickness;
+
+            elementType = 'door';
+
+            directionRightEnabled = true;
+            directionLeftEnabled = true;
+            materialDetails = 'betzold_flexeo:metal';
+        }
+    ",
+    "geometry": "
+        BeginObjGroup('DOOR');
+            if (direction == 'right') {
+                AddExternalMesh('betzold_flexeo:flexeoDoor_door_right', Vector3f{19, -353, 903}, Vector3f{ -9, 177, 0});
+                 SetObjSurface(materialShelf);
+                 ScaleUvMatrixBy(Vector2f{400, 400});
+                AnimationMatrixRotateBy('view:open', Vector3f{0, 0, 1}, Vector3f{25, 6, 0}, 90);
+
+                BeginObjGroup('DETAILS');
+                    AddExternalMesh('betzold_flexeo:flexeoDoor_lower_hinge_right', Vector3f{32, -50, 64}, Vector3f{ -16, 25, 34});
+                    AnimationMatrixRotateBy('view:open', Vector3f{0, 0, 1}, Vector3f{25, 6, 0}, 90);
+                    AddExternalMesh('betzold_flexeo:flexeoDoor_upper_hinge_right', Vector3f{32, -50, 64}, Vector3f{ -16, 25, 802});
+                    AnimationMatrixRotateBy('view:open', Vector3f{0, 0, 1}, Vector3f{25, 6, 0}, 90);
+                    AddExternalMesh('betzold_flexeo:flexeoDoor_lower_mounting_right', Vector3f{78, -24, 56}, Vector3f{ -39, 12, 37});
+                    AddExternalMesh('betzold_flexeo:flexeoDoor_upper_mounting_right', Vector3f{78, -24, 56}, Vector3f{ -39, 12, 806});
+                    AddExternalMesh('betzold_flexeo:flexeoDoor_handle_right', Vector3f{51, -10, 152}, Vector3f{ -25, 5, 374});
+                    AnimationMatrixRotateBy('view:open', Vector3f{0, 0, 1}, Vector3f{25, 6, 0}, 90);
+                EndObjGroup('DETAILS');
+                 SetObjSurface(materialDetails);
+            }
+            else {
+                AddExternalMesh('betzold_flexeo:flexeoDoor_door_left', Vector3f{19, -353, 903}, Vector3f{ -9, 177, 0});
+                 SetObjSurface(materialShelf);
+                 ScaleUvMatrixBy(Vector2f{400, 400});
+                AnimationMatrixRotateBy('view:open', Vector3f{0, 0, 1}, Vector3f{25, -(width + wallthickness + 2), 0}, -90);
+                BeginObjGroup('DETAILS');
+                    AddExternalMesh('betzold_flexeo:flexeoDoor_lower_hinge_left', Vector3f{32, -50, 64}, Vector3f{ -16, 25, 34});
+                    AnimationMatrixRotateBy('view:open', Vector3f{0, 0, 1}, Vector3f{25, -(width + wallthickness + 2), 0}, -90);
+
+                    AddExternalMesh('betzold_flexeo:flexeoDoor_upper_hinge_left', Vector3f{32, -50, 64}, Vector3f{ -16, 25, 802});
+                    AnimationMatrixRotateBy('view:open', Vector3f{0, 0, 1}, Vector3f{25, -(width + wallthickness + 2), 0}, -90);
+
+                    AddExternalMesh('betzold_flexeo:flexeoDoor_lower_mounting_left', Vector3f{78, -24, 56}, Vector3f{ -39, 12, 37});
+                    AddExternalMesh('betzold_flexeo:flexeoDoor_upper_mounting_left', Vector3f{78, -24, 56}, Vector3f{ -39, 12, 806});
+                    AddExternalMesh('betzold_flexeo:flexeoDoor_handle_left', Vector3f{51, -10, 152}, Vector3f{ -25, 5, 374});
+                    AnimationMatrixRotateBy('view:open', Vector3f{0, 0, 1}, Vector3f{25, -(width + wallthickness + 2), 0}, -90);
+
+                EndObjGroup('DETAILS');
+                 SetObjSurface(materialDetails);
+            }
+
+
+        EndObjGroup('DOOR');
+         RotateMatrixBy(Vector3f{0, 0, 1}, Vector3f{0, 0, 0}, 90);
+         MoveMatrixBy(Vector3f{ -wallthickness / 2, 0, -wallthickness / 4});
+    ",
+    "childDockings": {
+        "points": [
+            {
+                "mask": "interiorDoor",
+                "position": "{0, 0, 0}",
+                "collisionCondition": "
+                    for (_.i = 0; _.i < length(collidingComponentIDs); _.i++) {
+                        _.runtimeIdOfCollidingComponent = get(collidingComponentIDs, _.i);
+                        _.externalIdOfCollidingComponent = getComponentProperty('externalId', _.runtimeIdOfCollidingComponent);
+
+                        if (in(_.externalIdOfCollidingComponent, 'flexeo_door') || in(_.externalIdOfCollidingComponent, 'flexeo_interior_set')) {
+                            return false;
+                        }
+                    }
+                    return true;
+                "
+            }
+        ]
+    },
+    "articleNr": "'betzold_flexeo:flexeo_door'"
+}
