@@ -9,6 +9,7 @@
                 "en": "Material Interior",
                 "de": "Material Innenaustattung"
             },
+            "sort": 1,
             "visible": true,
             "validValues": [
                 "betzold_flexeo:beech",

@@ -86,6 +86,7 @@
                 "de": "Innenaustattung Korpus 1"
             },
             "visible": true,
+            "visibleInPartList": "false",
             "valueObjects": [
                 {
                     "value": "none",
@@ -158,6 +159,7 @@
             },
             "visible": "corpusCount >= 2",
             "visibleAsGlobal": "corpusCount >= 2",
+            "visibleInPartList": "false",
             "valueObjects": [
                 {
                     "value": "none",
@@ -230,6 +232,7 @@
             },
             "visible": "corpusCount >= 3",
             "visibleAsGlobal": "corpusCount >= 3",
+            "visibleInPartList": "false",
             "valueObjects": [
                 {
                     "value": "none",
@@ -302,6 +305,7 @@
             },
             "visible": "corpusCount >= 4",
             "visibleAsGlobal": "corpusCount >= 4",
+            "visibleInPartList": "false",
             "valueObjects": [
                 {
                     "value": "none",
@@ -374,6 +378,7 @@
             },
             "visible": "corpusCount >= 5",
             "visibleAsGlobal": "corpusCount >= 5",
+            "visibleInPartList": "false",
             "valueObjects": [
                 {
                     "value": "none",
@@ -797,23 +802,23 @@
     "possibleChildren": [
         {
             "itemId": "betzold_flexeo:interior_set_1",
-            "condition": "true"
+            "condition": "false"
         },
         {
             "itemId": "betzold_flexeo:interior_set2",
-            "condition": "true"
+            "condition": "false"
         },
         {
             "itemId": "betzold_flexeo:interior_set3",
-            "condition": "true"
+            "condition": "false"
         },
         {
             "itemId": "betzold_flexeo:interior_set4",
-            "condition": "true"
+            "condition": "false"
         },
         {
             "itemId": "betzold_flexeo:interior_set5",
-            "condition": "true"
+            "condition": "false"
         },
         {
             "itemId": "betzold_flexeo:interior_shelf",
