@@ -4,11 +4,11 @@
         {
             "key": "materialBoxes",
             "type": "Material",
+            "global": true,
             "labels": {
                 "en": "Material Box",
                 "de": "Material Box"
             },
-            "global": true,
             "sort": 1,
             "visible": true,
             "validValues": [
@@ -68,5 +68,29 @@
             }
         ]
     },
-    "articleNr": "'betzold_flexeo:flexeo_box'"
+    "articleNr": "
+        articleNr = 'AAAE-1-N';
+
+        if (materialBoxes == 'betzold_flexeo:box_yellow') {
+            articleNr = articleNr | '-K000';
+        }
+        else if (materialBoxes == 'betzold_flexeo:box_orange') {
+            articleNr = articleNr | '-K001';
+        }
+        else if (materialBoxes == 'betzold_flexeo:box_light_greem') {
+            articleNr = articleNr | '-K002';
+        }
+        else if (materialBoxes == 'betzold_flexeo:box_dark_green') {
+            articleNr = articleNr | '-K003';
+        }
+        else if (materialBoxes == 'betzold_flexeo:box_light_blue') {
+            articleNr = articleNr | '-K004';
+        }
+        else if (materialBoxes == 'betzold_flexeo:box_dark_blue') {
+            articleNr = articleNr | '-K005';
+        }
+        else if (materialBoxes == 'betzold_flexeo:box_transparent') {
+            articleNr = articleNr | '-K006';
+        }
+    "
 }

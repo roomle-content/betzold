@@ -837,5 +837,47 @@
             "condition": "true"
         }
     ],
-    "articleNr": "'betzold_flexeo:flexeo_master'"
+    "articleNr": "
+        articleNr = 'HHAAA-' | corpusCount | '-N';
+        if (material == 'betzold_flexeo:beech') {
+            articleNr = articleNr | '-M002-';
+        }
+        else if (material == 'betzold_flexeo:oak') {
+            articleNr = articleNr | '-M003-';
+        }
+        else if (material == 'betzold_flexeo:maple') {
+            articleNr = articleNr | '-M000-';
+        }
+        else if (material == 'betzold_flexeo:beech_dark') {
+            articleNr = articleNr | '-M001-';
+        }
+        else if (material == 'betzold_flexeo:grey') {
+            articleNr = articleNr | '-M006-';
+        }
+        else if (material == 'betzold_flexeo:white') {
+            articleNr = articleNr | '-M009-';
+        }
+        else if (material == 'betzold_flexeo:yellow') {
+            articleNr = articleNr | '-M005-';
+        }
+        else if (material == 'betzold_flexeo:red') {
+            articleNr = articleNr | '-M008-';
+        }
+        else if (material == 'betzold_flexeo:green') {
+            articleNr = articleNr | '-M007-';
+        }
+        else if (material == 'betzold_flexeo:blue') {
+            articleNr = articleNr | '-M004-';
+        }
+
+        if (footType == 'wheels') {
+            articleNr = articleNr | 'S000';
+        }
+        else if (footType == 'stand') {
+            articleNr = articleNr | 'S001';
+        }
+        else if (footType == 'socket') {
+            articleNr = articleNr | 'S002';
+        }
+    "
 }

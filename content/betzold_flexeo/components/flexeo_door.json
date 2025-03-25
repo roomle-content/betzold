@@ -60,6 +60,25 @@
                     "condition": "directionLeftEnabled"
                 }
             ]
+        },
+        {
+            "key": "handleType",
+            "type": "String",
+            "labels": {
+                "en": "Handle type",
+                "de": "Schließart"
+            },
+            "visible": true,
+            "valueObjects": [
+                {
+                    "value": "bow",
+                    "labels": {
+                        "en": "Bow hamdle with lock",
+                        "de": "Bogengriff mit Schloss"
+                    },
+                    "condition": "true"
+                }
+            ]
         }
     ],
     "animations": [
@@ -71,19 +90,19 @@
             },
             "actions": [
                 {
+                    "key": "open",
                     "labels": {
                         "en": "Open",
                         "de": "Offen"
                     },
-                    "key": "open",
                     "type": "matrix"
                 },
                 {
+                    "key": "closed",
                     "labels": {
                         "en": "Closed",
                         "de": "Geschlossen"
                     },
-                    "key": "closed",
                     "type": "origin"
                 }
             ]
@@ -170,5 +189,47 @@
             }
         ]
     },
-    "articleNr": "'betzold_flexeo:flexeo_door'"
+    "articleNr": "
+        articleNr = 'AAAF-1-';
+
+        if (direction == 'left') {
+            articleNr = articleNr | 'R';
+        }
+        else {
+            articleNr = articleNr | 'L';
+        }
+
+        if (materialShelf == 'betzold_flexeo:beech') {
+            articleNr = articleNr | '-M002';
+        }
+        else if (materialShelf == 'betzold_flexeo:oak') {
+            articleNr = articleNr | '-M003';
+        }
+        else if (materialShelf == 'betzold_flexeo:maple') {
+            articleNr = articleNr | '-M000';
+        }
+        else if (materialShelf == 'betzold_flexeo:beech_dark') {
+            articleNr = articleNr | '-M001';
+        }
+        else if (materialShelf == 'betzold_flexeo:grey') {
+            articleNr = articleNr | '-M006';
+        }
+        else if (materialShelf == 'betzold_flexeo:white') {
+            articleNr = articleNr | '-M009';
+        }
+        else if (materialShelf == 'betzold_flexeo:yellow') {
+            articleNr = articleNr | '-M005';
+        }
+        else if (materialShelf == 'betzold_flexeo:red') {
+            articleNr = articleNr | '-M008';
+        }
+        else if (materialShelf == 'betzold_flexeo:green') {
+            articleNr = articleNr | '-M007';
+        }
+        else if (materialShelf == 'betzold_flexeo:blue') {
+            articleNr = articleNr | '-M004';
+        }
+
+        articleNr = articleNr | '-G001';
+    "
 }
