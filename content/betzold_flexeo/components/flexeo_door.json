@@ -49,7 +49,7 @@
                         "en": "Right",
                         "de": "Rechts"
                     },
-                    "condition": "directionRightEnabled"
+                    "condition": "directionLeftEnabled"
                 },
                 {
                     "value": "left",
@@ -57,7 +57,7 @@
                         "en": "Left",
                         "de": "Links"
                     },
-                    "condition": "directionLeftEnabled"
+                    "condition": "directionRightEnabled"
                 }
             ]
         },
@@ -126,7 +126,7 @@
     ",
     "geometry": "
         BeginObjGroup('DOOR');
-            if (direction == 'right') {
+            if (direction == 'left') {
                 AddExternalMesh('betzold_flexeo:flexeoDoor_door_right', Vector3f{19, -353, 903}, Vector3f{ -9, 177, 0});
                  SetObjSurface(materialShelf);
                  ScaleUvMatrixBy(Vector2f{400, 400});
@@ -192,7 +192,7 @@
     "articleNr": "
         articleNr = 'AAAF-1-';
 
-        if (direction == 'left') {
+        if (direction == 'right') {
             articleNr = articleNr | 'R';
         }
         else {

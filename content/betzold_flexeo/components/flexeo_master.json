@@ -708,11 +708,11 @@
                         condition = false;
                     }
 
-                    if (_.index != 0 && (get(interiorArrayDoorDocked, _.index - 1) == 1 || get(interiorArray, _.index - 1) == 2) && other.direction == 'right') {
+                    if (_.index != 0 && (get(interiorArrayDoorDocked, _.index - 1) == 1 || get(interiorArray, _.index - 1) == 2) && other.direction == 'left') {
                         condition = false;
                     }
 
-                    if (_.index < 4 && get(interiorArrayDoorDocked, _.index + 1) == 1 && other.direction == 'left') {
+                    if (_.index < 4 && get(interiorArrayDoorDocked, _.index + 1) == 1 && other.direction == 'right') {
                         condition = false;
                     }
                 ",

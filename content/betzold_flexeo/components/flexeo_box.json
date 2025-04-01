@@ -14,7 +14,7 @@
             "validValues": [
                 "betzold_flexeo:box_yellow",
                 "betzold_flexeo:box_orange",
-                "betzold_flexeo:box_light_greem",
+                "betzold_flexeo:box_light_green",
                 "betzold_flexeo:box_dark_green",
                 "betzold_flexeo:box_light_blue",
                 "betzold_flexeo:box_dark_blue",
@@ -77,7 +77,7 @@
         else if (materialBoxes == 'betzold_flexeo:box_orange') {
             articleNr = articleNr | '-K001';
         }
-        else if (materialBoxes == 'betzold_flexeo:box_light_greem') {
+        else if (materialBoxes == 'betzold_flexeo:box_light_green') {
             articleNr = articleNr | '-K002';
         }
         else if (materialBoxes == 'betzold_flexeo:box_dark_green') {

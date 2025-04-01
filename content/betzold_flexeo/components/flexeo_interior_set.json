@@ -37,7 +37,7 @@
             "validValues": [
                 "betzold_flexeo:box_yellow",
                 "betzold_flexeo:box_orange",
-                "betzold_flexeo:box_light_greem",
+                "betzold_flexeo:box_light_green",
                 "betzold_flexeo:box_dark_green",
                 "betzold_flexeo:box_light_blue",
                 "betzold_flexeo:box_dark_blue",
@@ -137,19 +137,19 @@
             },
             "actions": [
                 {
+                    "key": "open",
                     "labels": {
                         "en": "Open",
                         "de": "Offen"
                     },
-                    "key": "open",
                     "type": "matrix"
                 },
                 {
+                    "key": "closed",
                     "labels": {
                         "en": "Closed",
                         "de": "Geschlossen"
                     },
-                    "key": "closed",
                     "type": "origin"
                 }
             ]
