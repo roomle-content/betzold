@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<!--
+
+    Roomle Local Content Server License
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), 
+    to use, copy, modify, and distribute copies of the Software, subject to the following conditions:
+
+    1. The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+    2. The Software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, 
+      fitness for a particular purpose, and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages, or other 
+      liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the Software or the use or other dealings 
+      in the Software.
+
+    Roomle GmbH
+
+    ----------------------------------------------------------------------------
+
+    This is the main entry point for the Rubens Local Content Server. It sets up the configurator container and the interactions container.
+    It also includes the buttons for the interactions and the configuration.
+
+-->
+
+<head>
+  <link rel="icon" href="/rubens_content_server/favicon.jpg" type="image/jpeg">
+  <title>Rubens Local Content Server</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    iframe {
+      border: 0;
+    }
+
+    #configurator-container {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    #interactions-container {
+      position: absolute;
+      bottom: 0;
+      left: 250px;
+    }
+
+    #watchPrintout {
+      position: absolute;
+      top: 130px;
+      left: 50px;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    #errorsPrintout {
+      position: absolute;
+      bottom: 150px;
+      left: 10px;
+      pointer-events: none;
+      user-select: none;
+      overflow: hidden;
+      max-height: 200px;
+    }
+
+    #partListPrintout {
+      position: absolute;
+      top: 80px;
+      /* 480 is width of the interaction container of the Rubens Configurator */
+      right: 500px;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    #selectionNavPanel {
+      position: absolute;
+      left: 5px;
+      top: 55px;
+      width: 30%;
+      height: 75px;
+      pointer-events: none;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <label id="watchPrintout"> </label>
+  <label id="partListPrintout" style="display: none"> </label>
+  <label id="errorsPrintout"> </label>
+  <!-- setup the configurator container -->
+  <div id="configurator-container"> </div>
+  <div id="interactions-container">
+    <table>
+
+      <tr>
+
+        <td>
+          <label><small>Content Source:</small></label>
+          <label id="contentSource"><small>Local</small></label>
+          <button id="switchContentSource">Switch</button>
+        </td>
+
+        <td>
+          <label><small>Random Interaction:</small></label>
+          <button id="doRandomInteraction">Once</button>
+          <button id="loopRandomInteraction">Loop</button>
+          <label id="randomInteractionResult"> </label>
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>
+          <label><small>Configuration:</small></label>
+          <button id="showConfiguration">Show</button>
+          <button id="confToClipboard">Copy</button>
+          <button id="confFromClipboard">Paste</button>
+          <button id="lastCopiedFromClipboard">Paste Last Copied</button>
+        </td>
+        
+        <td>
+          <label><small>Part List:</small></label>
+          <button id="showPartList">Show</button>
+          <button id="copyPartList">Copy</button>
+          <button id="displayPartList">Display</button>
+          <label id="partListStatus"> </label>
+          <button id="generateHOMAGiXExport">generateHOMAGiXExport</button>
+        </td>
+
+      </tr>
+
+    </table>
+  </div>
+  <div id="selectionNavPanel">
+    <label><small></small></label>
+  </div>
+
+  <!-- link to the script file -->
+  <script src="/rubens_content_server/roomleconfigurator.js" type="module"></script>
+</body>
+
+</html>

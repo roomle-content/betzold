@@ -1,0 +1,20 @@
+{
+    "tenant": "betzold",
+    "contentServerPort": 55008,
+    "catalogToTenantOverride": {},
+    "projects": [
+        {
+            "compileCatalogs": [
+                "betzold_flexeo"
+            ],
+            "rootComponentIds": [
+                "betzold_flexeo:flexeo_master"
+            ],
+            "name": "Flexeo",
+            "quickBuild": true
+        }
+    ],
+    "contentServer": {
+        "port": 55002
+    }
+}
