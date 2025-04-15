@@ -92,5 +92,22 @@
         else if (materialBoxes == 'betzold_flexeo:box_transparent') {
             articleNr = articleNr | '-K006';
         }
-    "
+    ",
+    "plugin-data": {
+        "imos-ix-export": {
+            "articles": [
+                {
+                    "name": "'Box'",
+                    "position": "getAbsolutePosition()",
+                    "attributes": {
+                        "ArticleNumber": "'808006'",
+                        "Width": "self.width",
+                        "Depth": "self.depth",
+                        "Height": "150",
+                        "WoodDecor": "self.materialBoxes"
+                    }
+                }
+            ]
+        }
+    }
 }

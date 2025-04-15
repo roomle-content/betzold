@@ -231,5 +231,24 @@
         }
 
         articleNr = articleNr | '-G001';
-    "
+    ",
+    "plugin-data": {
+        "imos-ix-export": {
+            "articles": [
+                {
+                    "name": "'Door'",
+                    "position": "getAbsolutePosition()",
+                    "attributes": {
+                        "ArticleNumber": "'808006'",
+                        "Width": "self.width",
+                        "Depth": "self.wallthickness",
+                        "Height": "self.totalHeight",
+                        "WoodDecor": "self.materialShelf",
+                        "Direction": "self.direction",
+                        "HandleType": "self.handleType"
+                    }
+                }
+            ]
+        }
+    }
 }

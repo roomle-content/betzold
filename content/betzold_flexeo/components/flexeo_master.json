@@ -525,6 +525,8 @@
                 }
             }
         }
+
+        totalWidth = wallthickness + (width + wallthickness) * corpusCount;
     ",
     "geometry": "
         if (footType == 'socket') {
@@ -879,5 +881,23 @@
         else if (footType == 'socket') {
             articleNr = articleNr | 'S002';
         }
-    "
+    ",
+    "plugin-data": {
+        "imos-ix-export": {
+            "articles": [
+                {
+                    "name": "'808006'",
+                    "position": "getAbsolutePosition()",
+                    "attributes": {
+                        "ArticleNumber": "'808006'",
+                        "Width": "self.totalWidth",
+                        "Depth": "self.depth",
+                        "Height": "self.totalHeight",
+                        "WoodDecor": "self.material",
+                        "Base": "self.footType"
+                    }
+                }
+            ]
+        }
+    }
 }

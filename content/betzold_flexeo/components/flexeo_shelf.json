@@ -98,5 +98,22 @@
         else if (materialShelf == 'betzold_flexeo:blue') {
             articleNr = articleNr | '-M004';
         }
-    "
+    ",
+    "plugin-data": {
+        "imos-ix-export": {
+            "articles": [
+                {
+                    "name": "'Shelf'",
+                    "position": "getAbsolutePosition()",
+                    "attributes": {
+                        "ArticleNumber": "'808006'",
+                        "Width": "self.width",
+                        "Depth": "self.depth - 20",
+                        "Height": "self.wallthickness",
+                        "WoodDecor": "self.materialShelf"
+                    }
+                }
+            ]
+        }
+    }
 }
