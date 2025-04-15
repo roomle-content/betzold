@@ -25,6 +25,46 @@
             ]
         }
     ],
+    "functions": [
+        {
+            "key": "getArticleNr",
+            "script": "
+                _.result = 'AAAD-1-N';
+                if (materialShelf == 'betzold_flexeo:beech') {
+                    _.result = _.result | '-M002';
+                }
+                else if (materialShelf == 'betzold_flexeo:oak') {
+                    _.result = _.result | '-M003';
+                }
+                else if (materialShelf == 'betzold_flexeo:maple') {
+                    _.result = _.result | '-M000';
+                }
+                else if (materialShelf == 'betzold_flexeo:beech_dark') {
+                    _.result = _.result | '-M001';
+                }
+                else if (materialShelf == 'betzold_flexeo:grey') {
+                    _.result = _.result | '-M006';
+                }
+                else if (materialShelf == 'betzold_flexeo:white') {
+                    _.result = _.result | '-M009';
+                }
+                else if (materialShelf == 'betzold_flexeo:yellow') {
+                    _.result = _.result | '-M005';
+                }
+                else if (materialShelf == 'betzold_flexeo:red') {
+                    _.result = _.result | '-M008';
+                }
+                else if (materialShelf == 'betzold_flexeo:green') {
+                    _.result = _.result | '-M007';
+                }
+                else if (materialShelf == 'betzold_flexeo:blue') {
+                    _.result = _.result | '-M004';
+                }
+
+                return _.result;
+            "
+        }
+    ],
     "onUpdate": "
         if (isnull(inited)) {
             inited = true;
@@ -66,39 +106,7 @@
             }
         ]
     },
-    "articleNr": "
-        articleNr = 'AAAD-1-N';
-        if (materialShelf == 'betzold_flexeo:beech') {
-            articleNr = articleNr | '-M002';
-        }
-        else if (materialShelf == 'betzold_flexeo:oak') {
-            articleNr = articleNr | '-M003';
-        }
-        else if (materialShelf == 'betzold_flexeo:maple') {
-            articleNr = articleNr | '-M000';
-        }
-        else if (materialShelf == 'betzold_flexeo:beech_dark') {
-            articleNr = articleNr | '-M001';
-        }
-        else if (materialShelf == 'betzold_flexeo:grey') {
-            articleNr = articleNr | '-M006';
-        }
-        else if (materialShelf == 'betzold_flexeo:white') {
-            articleNr = articleNr | '-M009';
-        }
-        else if (materialShelf == 'betzold_flexeo:yellow') {
-            articleNr = articleNr | '-M005';
-        }
-        else if (materialShelf == 'betzold_flexeo:red') {
-            articleNr = articleNr | '-M008';
-        }
-        else if (materialShelf == 'betzold_flexeo:green') {
-            articleNr = articleNr | '-M007';
-        }
-        else if (materialShelf == 'betzold_flexeo:blue') {
-            articleNr = articleNr | '-M004';
-        }
-    ",
+    "articleNr": "getArticleNr()",
     "plugin-data": {
         "imos-ix-export": {
             "articles": [
@@ -106,7 +114,7 @@
                     "name": "'Shelf'",
                     "position": "getAbsolutePosition()",
                     "attributes": {
-                        "ArticleNumber": "'808006'",
+                        "ArticleNumber": "getArticleNr()",
                         "Width": "self.width",
                         "Depth": "self.depth - 20",
                         "Height": "self.wallthickness",
