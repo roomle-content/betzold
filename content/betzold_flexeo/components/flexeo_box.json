@@ -20,6 +20,13 @@
                 "betzold_flexeo:box_dark_blue",
                 "betzold_flexeo:box_transparent"
             ]
+        },
+        {
+            "key": "parentRuntimeId",
+            "type": "Integer",
+            "volatile": true,
+            "defaultValue": 0,
+            "visible": true
         }
     ],
     "functions": [
@@ -63,7 +70,11 @@
             width = 335;
             depth = 480 - wallthickness;
             elementType = 'box';
+
+            runtimeId = getComponentProperty('runtimeId');
         }
+
+        exportMergeArticleRuntimeId = parentRuntimeId > 0 ? parentRuntimeId : runtimeId;
     ",
     "boundingGeometry": "
         AddCube(Vector3f{width, depth, 150});
@@ -109,6 +120,7 @@
                     "position": "getAbsolutePosition()",
                     "attributes": {
                         "ArticleNumber": "getArticleNr()",
+                        "___MERGEARTICLE": "self.exportMergeArticleRuntimeId",
                         "Width": "self.width",
                         "Depth": "self.depth",
                         "Height": "150",

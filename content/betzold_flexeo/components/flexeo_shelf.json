@@ -23,6 +23,13 @@
                 "betzold_flexeo:green",
                 "betzold_flexeo:blue"
             ]
+        },
+        {
+            "key": "parentRuntimeId",
+            "type": "Integer",
+            "volatile": true,
+            "defaultValue": 0,
+            "visible": true
         }
     ],
     "functions": [
@@ -75,7 +82,11 @@
             depth = 480 - wallthickness;
 
             elementType = 'shelf';
+
+            runtimeId = getComponentProperty('runtimeId');
         }
+
+        exportMergeArticleRuntimeId = parentRuntimeId > 0 ? parentRuntimeId : runtimeId;
     ",
     "geometry": "
         AddCube(Vector3f{width, depth - 20, wallthickness});
@@ -115,6 +126,7 @@
                     "position": "getAbsolutePosition()",
                     "attributes": {
                         "ArticleNumber": "getArticleNr()",
+                        "___MERGEARTICLE": "self.exportMergeArticleRuntimeId",
                         "Width": "self.width",
                         "Depth": "self.depth - 20",
                         "Height": "self.wallthickness",

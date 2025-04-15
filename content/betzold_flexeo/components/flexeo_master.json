@@ -440,6 +440,15 @@
                     set(interiorSetChanged, 4, 1);
                 }
             "
+        },
+        {
+            "key": "parentRuntimeId",
+            "type": "Integer",
+            "volatile": true,
+            "defaultValue": 0,
+            "visible": true
+        }
+    ],
     "functions": [
         {
             "key": "getArticleNr",
@@ -510,6 +519,8 @@
             interiorDeleteDoor = [0, 0, 0, 0, 0];
 
             socketHeight = 65;
+
+            runtimeId = getComponentProperty('runtimeId');
         }
 
         for (_.i = 0; _.i < 5; _.i = _.i + 1) {
@@ -575,6 +586,8 @@
         }
 
         totalWidth = wallthickness + (width + wallthickness) * corpusCount;
+
+        exportMergeArticleRuntimeId = parentRuntimeId > 0 ? parentRuntimeId : runtimeId;
     ",
     "geometry": "
         if (footType == 'socket') {
@@ -682,6 +695,12 @@
                         condition = true;
                     }
                 ",
+                "assignmentsOnDock": {
+                    "parentRuntimeId": "self.exportMergeArticleRuntimeId"
+                },
+                "assignmentsOnUnDock": {
+                    "parentRuntimeId": 0
+                },
                 "assignmentScripts": {
                     "onDock": "
                         _.index = (round(xFromVector(connection.position) / (width + wallthickness), 0));
@@ -766,6 +785,12 @@
                         condition = false;
                     }
                 ",
+                "assignmentsOnDock": {
+                    "parentRuntimeId": "self.exportMergeArticleRuntimeId"
+                },
+                "assignmentsOnUnDock": {
+                    "parentRuntimeId": 0
+                },
                 "assignmentScripts": {
                     "onDock": "
                         _.index = (round(xFromVector(connection.position) / (width + wallthickness), 0));
@@ -834,6 +859,12 @@
                         condition = false;
                     }
                 ",
+                "assignmentsOnDock": {
+                    "parentRuntimeId": "self.exportMergeArticleRuntimeId"
+                },
+                "assignmentsOnUnDock": {
+                    "parentRuntimeId": 0
+                },
                 "assignmentScripts": {
                     "onDock": "
                         _.indexX = (round(xFromVector(connection.position) / (width + wallthickness), 0));
@@ -896,6 +927,7 @@
                     "position": "getAbsolutePosition()",
                     "attributes": {
                         "ArticleNumber": "getArticleNr()",
+                        "___MERGEARTICLE": "self.exportMergeArticleRuntimeId",
                         "Width": "self.totalWidth",
                         "Depth": "self.depth",
                         "Height": "self.totalHeight",

@@ -79,6 +79,13 @@
                     "condition": "true"
                 }
             ]
+        },
+        {
+            "key": "parentRuntimeId",
+            "type": "Integer",
+            "volatile": true,
+            "defaultValue": 0,
+            "visible": true
         }
     ],
     "animations": [
@@ -172,7 +179,11 @@
             directionRightEnabled = true;
             directionLeftEnabled = true;
             materialDetails = 'betzold_flexeo:metal';
+
+            runtimeId = getComponentProperty('runtimeId');
         }
+
+        exportMergeArticleRuntimeId = parentRuntimeId > 0 ? parentRuntimeId : runtimeId;
     ",
     "geometry": "
         BeginObjGroup('DOOR');
@@ -248,6 +259,7 @@
                     "position": "getAbsolutePosition()",
                     "attributes": {
                         "ArticleNumber": "getArticleNr()",
+                        "___MERGEARTICLE": "self.exportMergeArticleRuntimeId",
                         "Width": "self.width",
                         "Depth": "self.wallthickness",
                         "Height": "self.totalHeight",
