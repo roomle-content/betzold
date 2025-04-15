@@ -1,0 +1,51 @@
+{
+    "catalog": {
+        "id": "betzold_flexeo",
+        "free": true,
+        "public": true,
+        "featured": false,
+        "created": "2024-10-08T07:33:15.000Z",
+        "updated": "2024-10-08T07:33:15.000Z",
+        "active": true,
+        "hidden": false,
+        "visibilityStatus": 0,
+        "publiclyOrderable": true,
+        "mandatory": false,
+        "links": {
+            "items": "/catalogs/betzold_flexeo/items",
+            "catalogSets": "/catalogs/betzold_flexeo/catalogSets",
+            "allItems": "/catalogs/betzold_flexeo/allItems",
+            "components": "/catalogs/betzold_flexeo/components",
+            "materials": "/catalogs/betzold_flexeo/materials",
+            "textures": "/catalogs/betzold_flexeo/textures",
+            "allTags": "/catalogs/betzold_flexeo/allTags",
+            "rootTags": "/catalogs/betzold_flexeo/rootTags",
+            "retailers": "/catalogs/betzold_flexeo/retailers",
+            "retailerInfos": "/catalogs/betzold_flexeo/retailerInfos",
+            "visibleToTenants": "/catalogs/betzold_flexeo/visibleToTenants",
+            "visibleToUsers": "/catalogs/betzold_flexeo/visibleToUsers",
+            "meshes": "/catalogs/betzold_flexeo/meshes",
+            "drafts": "/catalogs/betzold_flexeo/drafts",
+            "catalogElementAdditionalInfos": "/catalogs/betzold_flexeo/catalogElementAdditionalInfos"
+        },
+        "language": "en",
+        "label": "Betzold Flexeo",
+        "orderable": false,
+        "requestable": false,
+        "retailPriceAllowed": false,
+        "tenantIsOwner": false,
+        "purchased": false,
+        "tags": [
+            "betzold_flexeo_root"
+        ],
+        "rootTags": [
+            "betzold_flexeo_root"
+        ],
+        "tenant": 15233,
+        "branded": true,
+        "shownInOverview": false,
+        "name": "Betzold Flexeo",
+        "hiddenByUser": false,
+        "hiddenByTenant": true
+    }
+}

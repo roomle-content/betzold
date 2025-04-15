@@ -1,0 +1,54 @@
+{
+    "tags": [
+        {
+            "id": "betzold_flexeo_root",
+            "global": false,
+            "created": "2024-10-08T07:33:15.000Z",
+            "updated": "2024-10-08T07:33:15.000Z",
+            "links": {
+                "items": "/tags/betzold_flexeo_root/items",
+                "materials": "/tags/betzold_flexeo_root/materials",
+                "components": "/tags/betzold_flexeo_root/components",
+                "parentTags": "/tags/betzold_flexeo_root/parentTags"
+            },
+            "catalog": "betzold_flexeo",
+            "label": "Betzold Flexeo",
+            "language": "en",
+            "items": [
+                "betzold_flexeo:flexeo_default"
+            ],
+            "components": [],
+            "hidden": false,
+            "visibilityStatus": 0
+        },
+        {
+            "id": "betzold_sets",
+            "global": false,
+            "created": "2024-10-16T09:08:05.000Z",
+            "updated": "2024-10-16T09:08:05.000Z",
+            "links": {
+                "items": "/tags/betzold_sets/items",
+                "materials": "/tags/betzold_sets/materials",
+                "components": "/tags/betzold_sets/components",
+                "parentTags": "/tags/betzold_sets/parentTags"
+            },
+            "catalog": "betzold_flexeo",
+            "label": "Sets",
+            "language": "en",
+            "items": [
+                "betzold_flexeo:interior_set3",
+                "betzold_flexeo:interior_set4",
+                "betzold_flexeo:interior_set2",
+                "betzold_flexeo:interior_set5",
+                "betzold_flexeo:interior_set_1"
+            ],
+            "components": [],
+            "hidden": false,
+            "visibilityStatus": 0
+        }
+    ],
+    "meta": {
+        "total": 2,
+        "serverTime": "2025-04-15T14:17:32.350Z"
+    }
+}

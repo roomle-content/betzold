@@ -1,0 +1,92 @@
+{
+    "textures": [
+        {
+            "id": 46349,
+            "material": "betzold_flexeo:beech",
+            "image": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/textures/46349/image.jpg?marker=1729719944",
+            "height": 0,
+            "width": 0,
+            "mmHeight": 400,
+            "mmWidth": 400,
+            "qualityLevel": 0,
+            "tileable": true,
+            "definition": {
+                "height": 0,
+                "width": 0,
+                "mmHeight": 400,
+                "mmWidth": 400,
+                "tileable": true,
+                "mapping": "RGB"
+            },
+            "mapping": "RGB",
+            "url": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/textures/46349/image.jpg?marker=1729719944"
+        },
+        {
+            "id": 46352,
+            "material": "betzold_flexeo:beech_dark",
+            "image": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/textures/46352/image.jpg?marker=1729720325",
+            "height": 0,
+            "width": 0,
+            "mmHeight": 400,
+            "mmWidth": 400,
+            "qualityLevel": 0,
+            "tileable": true,
+            "definition": {
+                "height": 0,
+                "width": 0,
+                "mmHeight": 400,
+                "mmWidth": 400,
+                "tileable": true,
+                "mapping": "RGB"
+            },
+            "mapping": "RGB",
+            "url": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/textures/46352/image.jpg?marker=1729720325"
+        },
+        {
+            "id": 46351,
+            "material": "betzold_flexeo:maple",
+            "image": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/textures/46351/image.jpg?marker=1729720245",
+            "height": 0,
+            "width": 0,
+            "mmHeight": 400,
+            "mmWidth": 400,
+            "qualityLevel": 0,
+            "tileable": true,
+            "definition": {
+                "height": 0,
+                "width": 0,
+                "mmHeight": 400,
+                "mmWidth": 400,
+                "tileable": true,
+                "mapping": "RGB"
+            },
+            "mapping": "RGB",
+            "url": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/textures/46351/image.jpg?marker=1729720245"
+        },
+        {
+            "id": 46350,
+            "material": "betzold_flexeo:oak",
+            "image": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/textures/46350/image.jpg?marker=1729720163",
+            "height": 0,
+            "width": 0,
+            "mmHeight": 400,
+            "mmWidth": 400,
+            "qualityLevel": 0,
+            "tileable": true,
+            "definition": {
+                "height": 0,
+                "width": 0,
+                "mmHeight": 400,
+                "mmWidth": 400,
+                "tileable": true,
+                "mapping": "RGB"
+            },
+            "mapping": "RGB",
+            "url": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/textures/46350/image.jpg?marker=1729720163"
+        }
+    ],
+    "meta": {
+        "total": 4,
+        "serverTime": "2025-04-15T14:17:32.352Z"
+    }
+}

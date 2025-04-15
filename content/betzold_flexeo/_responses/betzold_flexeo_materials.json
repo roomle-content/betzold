@@ -1,0 +1,1126 @@
+{
+    "materials": [
+        {
+            "externalIdentifier": "test",
+            "version": 0,
+            "id": "betzold_flexeo:test",
+            "shading": {
+                "version": "2.0.0",
+                "alpha": 1,
+                "transmission": 0,
+                "transmissionIOR": 0,
+                "roughness": 1,
+                "metallic": 0,
+                "basecolor": {
+                    "r": 0.9,
+                    "g": 0.9,
+                    "b": 0.9
+                },
+                "doubleSided": false,
+                "alphaMode": "opaque",
+                "occlusion": 1,
+                "emissiveIntensity": 0,
+                "clearcoatIntensity": 0,
+                "clearcoatRoughness": 0,
+                "clearcoatNormalScale": 0,
+                "sheenIntensity": 0,
+                "sheenRoughness": 0,
+                "thicknessFactor": 0,
+                "attenuationDistance": 0,
+                "emissiveColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "sheenColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "attenuationColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                }
+            },
+            "properties": {},
+            "label": "Test",
+            "language": "en",
+            "catalog": "betzold_flexeo",
+            "links": {
+                "textures": "/materials/betzold_flexeo:test/textures"
+            },
+            "hidden": false,
+            "visibilityStatus": 0,
+            "active": true,
+            "created": "2024-10-16T10:09:19.000Z",
+            "updated": "2024-10-16T10:09:19.000Z"
+        },
+        {
+            "externalIdentifier": "beech",
+            "version": 0,
+            "id": "betzold_flexeo:beech",
+            "shading": {
+                "version": "2.0.0",
+                "alpha": 1,
+                "transmission": 0,
+                "transmissionIOR": 0,
+                "roughness": 0.8,
+                "metallic": 0,
+                "basecolor": {
+                    "r": 0.9,
+                    "g": 0.9,
+                    "b": 0.9
+                },
+                "doubleSided": false,
+                "alphaMode": "opaque",
+                "occlusion": 1,
+                "emissiveIntensity": 0,
+                "clearcoatIntensity": 0,
+                "clearcoatRoughness": 0,
+                "clearcoatNormalScale": 0,
+                "sheenIntensity": 0,
+                "sheenRoughness": 0,
+                "thicknessFactor": 0,
+                "attenuationDistance": 0,
+                "emissiveColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "sheenColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "attenuationColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                }
+            },
+            "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/textures/46349/image.jpg?marker=1731327360",
+            "textures": [
+                46349
+            ],
+            "label": "Beech",
+            "language": "en",
+            "catalog": "betzold_flexeo",
+            "links": {
+                "textures": "/materials/betzold_flexeo:beech/textures"
+            },
+            "hidden": false,
+            "visibilityStatus": 0,
+            "active": true,
+            "created": "2024-10-23T21:45:17.000Z",
+            "updated": "2024-11-11T12:16:00.000Z"
+        },
+        {
+            "externalIdentifier": "oak",
+            "version": 0,
+            "id": "betzold_flexeo:oak",
+            "shading": {
+                "version": "2.0.0",
+                "alpha": 1,
+                "transmission": 0,
+                "transmissionIOR": 0,
+                "roughness": 0.8,
+                "metallic": 0,
+                "basecolor": {
+                    "r": 0.9,
+                    "g": 0.9,
+                    "b": 0.9
+                },
+                "doubleSided": false,
+                "alphaMode": "opaque",
+                "occlusion": 1,
+                "emissiveIntensity": 0,
+                "clearcoatIntensity": 0,
+                "clearcoatRoughness": 0,
+                "clearcoatNormalScale": 0,
+                "sheenIntensity": 0,
+                "sheenRoughness": 0,
+                "thicknessFactor": 0,
+                "attenuationDistance": 0,
+                "emissiveColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "sheenColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "attenuationColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                }
+            },
+            "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/textures/46350/image.jpg?marker=1731327471",
+            "textures": [
+                46350
+            ],
+            "label": "Oak",
+            "language": "en",
+            "catalog": "betzold_flexeo",
+            "links": {
+                "textures": "/materials/betzold_flexeo:oak/textures"
+            },
+            "hidden": false,
+            "visibilityStatus": 0,
+            "active": true,
+            "created": "2024-10-23T21:47:26.000Z",
+            "updated": "2024-11-11T12:17:51.000Z"
+        },
+        {
+            "externalIdentifier": "maple",
+            "version": 0,
+            "id": "betzold_flexeo:maple",
+            "shading": {
+                "version": "2.0.0",
+                "alpha": 1,
+                "transmission": 0,
+                "transmissionIOR": 0,
+                "roughness": 0.8,
+                "metallic": 0,
+                "basecolor": {
+                    "r": 0.9,
+                    "g": 0.9,
+                    "b": 0.9
+                },
+                "doubleSided": false,
+                "alphaMode": "opaque",
+                "occlusion": 1,
+                "emissiveIntensity": 0,
+                "clearcoatIntensity": 0,
+                "clearcoatRoughness": 0,
+                "clearcoatNormalScale": 0,
+                "sheenIntensity": 0,
+                "sheenRoughness": 0,
+                "thicknessFactor": 0,
+                "attenuationDistance": 0,
+                "emissiveColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "sheenColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "attenuationColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                }
+            },
+            "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/textures/46351/image.jpg?marker=1731327448",
+            "textures": [
+                46351
+            ],
+            "label": "Maple",
+            "language": "en",
+            "catalog": "betzold_flexeo",
+            "links": {
+                "textures": "/materials/betzold_flexeo:maple/textures"
+            },
+            "hidden": false,
+            "visibilityStatus": 0,
+            "active": true,
+            "created": "2024-10-23T21:50:26.000Z",
+            "updated": "2024-11-11T12:17:28.000Z"
+        },
+        {
+            "externalIdentifier": "beech_dark",
+            "version": 0,
+            "id": "betzold_flexeo:beech_dark",
+            "shading": {
+                "version": "2.0.0",
+                "alpha": 1,
+                "transmission": 0,
+                "transmissionIOR": 0,
+                "roughness": 0.8,
+                "metallic": 0,
+                "basecolor": {
+                    "r": 0.9,
+                    "g": 0.9,
+                    "b": 0.9
+                },
+                "doubleSided": false,
+                "alphaMode": "opaque",
+                "occlusion": 1,
+                "emissiveIntensity": 0,
+                "clearcoatIntensity": 0,
+                "clearcoatRoughness": 0,
+                "clearcoatNormalScale": 0,
+                "sheenIntensity": 0,
+                "sheenRoughness": 0,
+                "thicknessFactor": 0,
+                "attenuationDistance": 0,
+                "emissiveColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "sheenColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "attenuationColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                }
+            },
+            "thumbnail": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/textures/46352/image.jpg?marker=1731327345",
+            "textures": [
+                46352
+            ],
+            "label": "Beech dark",
+            "language": "en",
+            "catalog": "betzold_flexeo",
+            "links": {
+                "textures": "/materials/betzold_flexeo:beech_dark/textures"
+            },
+            "hidden": false,
+            "visibilityStatus": 0,
+            "active": true,
+            "created": "2024-10-23T21:51:40.000Z",
+            "updated": "2024-11-11T12:15:45.000Z"
+        },
+        {
+            "externalIdentifier": "grey",
+            "version": 0,
+            "id": "betzold_flexeo:grey",
+            "shading": {
+                "version": "2.0.0",
+                "alpha": 1,
+                "transmission": 0,
+                "transmissionIOR": 0,
+                "roughness": 0.8,
+                "metallic": 0,
+                "basecolor": {
+                    "r": 0.8313725490196079,
+                    "g": 0.8117647058823529,
+                    "b": 0.788235294117647
+                },
+                "doubleSided": false,
+                "alphaMode": "opaque",
+                "occlusion": 1,
+                "emissiveIntensity": 0,
+                "clearcoatIntensity": 0,
+                "clearcoatRoughness": 0,
+                "clearcoatNormalScale": 0,
+                "sheenIntensity": 0,
+                "sheenRoughness": 0,
+                "thicknessFactor": 0,
+                "attenuationDistance": 0,
+                "emissiveColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "sheenColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "attenuationColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                }
+            },
+            "label": "Grey",
+            "language": "en",
+            "catalog": "betzold_flexeo",
+            "links": {
+                "textures": "/materials/betzold_flexeo:grey/textures"
+            },
+            "hidden": false,
+            "visibilityStatus": 0,
+            "active": true,
+            "created": "2024-10-23T21:53:26.000Z",
+            "updated": "2024-11-11T12:17:19.000Z"
+        },
+        {
+            "externalIdentifier": "white",
+            "version": 0,
+            "id": "betzold_flexeo:white",
+            "shading": {
+                "version": "2.0.0",
+                "alpha": 1,
+                "transmission": 0,
+                "transmissionIOR": 0,
+                "roughness": 0.8,
+                "metallic": 0,
+                "basecolor": {
+                    "r": 0.996078431372549,
+                    "g": 0.9803921568627451,
+                    "b": 0.9333333333333333
+                },
+                "doubleSided": false,
+                "alphaMode": "opaque",
+                "occlusion": 1,
+                "emissiveIntensity": 0,
+                "clearcoatIntensity": 0,
+                "clearcoatRoughness": 0,
+                "clearcoatNormalScale": 0,
+                "sheenIntensity": 0,
+                "sheenRoughness": 0,
+                "thicknessFactor": 0,
+                "attenuationDistance": 0,
+                "emissiveColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "sheenColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "attenuationColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                }
+            },
+            "label": "White",
+            "language": "en",
+            "catalog": "betzold_flexeo",
+            "links": {
+                "textures": "/materials/betzold_flexeo:white/textures"
+            },
+            "hidden": false,
+            "visibilityStatus": 0,
+            "active": true,
+            "created": "2024-10-23T21:54:13.000Z",
+            "updated": "2024-11-11T12:18:13.000Z"
+        },
+        {
+            "externalIdentifier": "yellow",
+            "version": 0,
+            "id": "betzold_flexeo:yellow",
+            "shading": {
+                "version": "2.0.0",
+                "alpha": 1,
+                "transmission": 0,
+                "transmissionIOR": 0,
+                "roughness": 0.8,
+                "metallic": 0,
+                "basecolor": {
+                    "r": 0.9921568627450981,
+                    "g": 0.7568627450980392,
+                    "b": 0
+                },
+                "doubleSided": false,
+                "alphaMode": "opaque",
+                "occlusion": 1,
+                "emissiveIntensity": 0,
+                "clearcoatIntensity": 0,
+                "clearcoatRoughness": 0,
+                "clearcoatNormalScale": 0,
+                "sheenIntensity": 0,
+                "sheenRoughness": 0,
+                "thicknessFactor": 0,
+                "attenuationDistance": 0,
+                "emissiveColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "sheenColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "attenuationColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                }
+            },
+            "label": "Yellow",
+            "language": "en",
+            "catalog": "betzold_flexeo",
+            "links": {
+                "textures": "/materials/betzold_flexeo:yellow/textures"
+            },
+            "hidden": false,
+            "visibilityStatus": 0,
+            "active": true,
+            "created": "2024-10-23T21:55:15.000Z",
+            "updated": "2024-11-11T12:18:21.000Z"
+        },
+        {
+            "externalIdentifier": "red",
+            "version": 0,
+            "id": "betzold_flexeo:red",
+            "shading": {
+                "version": "2.0.0",
+                "alpha": 1,
+                "transmission": 0,
+                "transmissionIOR": 0,
+                "roughness": 0.8,
+                "metallic": 0,
+                "basecolor": {
+                    "r": 0.788235294117647,
+                    "g": 0.0862745098039216,
+                    "b": 0.1019607843137255
+                },
+                "doubleSided": false,
+                "alphaMode": "opaque",
+                "occlusion": 1,
+                "emissiveIntensity": 0,
+                "clearcoatIntensity": 0,
+                "clearcoatRoughness": 0,
+                "clearcoatNormalScale": 0,
+                "sheenIntensity": 0,
+                "sheenRoughness": 0,
+                "thicknessFactor": 0,
+                "attenuationDistance": 0,
+                "emissiveColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "sheenColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "attenuationColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                }
+            },
+            "label": "Red",
+            "language": "en",
+            "catalog": "betzold_flexeo",
+            "links": {
+                "textures": "/materials/betzold_flexeo:red/textures"
+            },
+            "hidden": false,
+            "visibilityStatus": 0,
+            "active": true,
+            "created": "2024-10-23T21:56:01.000Z",
+            "updated": "2024-11-11T12:17:59.000Z"
+        },
+        {
+            "externalIdentifier": "green",
+            "version": 0,
+            "id": "betzold_flexeo:green",
+            "shading": {
+                "version": "2.0.0",
+                "alpha": 1,
+                "transmission": 0,
+                "transmissionIOR": 0,
+                "roughness": 0.8,
+                "metallic": 0,
+                "basecolor": {
+                    "r": 0.6666666666666666,
+                    "g": 0.792156862745098,
+                    "b": 0.2941176470588235
+                },
+                "doubleSided": false,
+                "alphaMode": "opaque",
+                "occlusion": 1,
+                "emissiveIntensity": 0,
+                "clearcoatIntensity": 0,
+                "clearcoatRoughness": 0,
+                "clearcoatNormalScale": 0,
+                "sheenIntensity": 0,
+                "sheenRoughness": 0,
+                "thicknessFactor": 0,
+                "attenuationDistance": 0,
+                "emissiveColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "sheenColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "attenuationColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                }
+            },
+            "label": "Green",
+            "language": "en",
+            "catalog": "betzold_flexeo",
+            "links": {
+                "textures": "/materials/betzold_flexeo:green/textures"
+            },
+            "hidden": false,
+            "visibilityStatus": 0,
+            "active": true,
+            "created": "2024-10-23T21:56:22.000Z",
+            "updated": "2024-11-11T12:17:12.000Z"
+        },
+        {
+            "externalIdentifier": "blue",
+            "version": 0,
+            "id": "betzold_flexeo:blue",
+            "shading": {
+                "version": "2.0.0",
+                "alpha": 1,
+                "transmission": 0,
+                "transmissionIOR": 0,
+                "roughness": 0.8,
+                "metallic": 0,
+                "basecolor": {
+                    "r": 0,
+                    "g": 0.3607843137254902,
+                    "b": 0.6549019607843137
+                },
+                "doubleSided": false,
+                "alphaMode": "opaque",
+                "occlusion": 1,
+                "emissiveIntensity": 0,
+                "clearcoatIntensity": 0,
+                "clearcoatRoughness": 0,
+                "clearcoatNormalScale": 0,
+                "sheenIntensity": 0,
+                "sheenRoughness": 0,
+                "thicknessFactor": 0,
+                "attenuationDistance": 0,
+                "emissiveColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "sheenColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "attenuationColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                }
+            },
+            "label": "Blue",
+            "language": "en",
+            "catalog": "betzold_flexeo",
+            "links": {
+                "textures": "/materials/betzold_flexeo:blue/textures"
+            },
+            "hidden": false,
+            "visibilityStatus": 0,
+            "active": true,
+            "created": "2024-10-23T21:56:44.000Z",
+            "updated": "2024-11-11T12:16:06.000Z"
+        },
+        {
+            "externalIdentifier": "box_yellow",
+            "version": 0,
+            "id": "betzold_flexeo:box_yellow",
+            "shading": {
+                "version": "2.0.0",
+                "alpha": 1,
+                "transmission": 0,
+                "transmissionIOR": 0,
+                "roughness": 0.5,
+                "metallic": 0,
+                "basecolor": {
+                    "r": 1,
+                    "g": 0.796078431372549,
+                    "b": 0
+                },
+                "doubleSided": false,
+                "alphaMode": "opaque",
+                "occlusion": 1,
+                "emissiveIntensity": 0,
+                "clearcoatIntensity": 0,
+                "clearcoatRoughness": 0,
+                "clearcoatNormalScale": 0,
+                "sheenIntensity": 0,
+                "sheenRoughness": 0,
+                "thicknessFactor": 0,
+                "attenuationDistance": 0,
+                "emissiveColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "sheenColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "attenuationColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                }
+            },
+            "label": "Yellow",
+            "language": "en",
+            "catalog": "betzold_flexeo",
+            "links": {
+                "textures": "/materials/betzold_flexeo:box_yellow/textures"
+            },
+            "hidden": false,
+            "visibilityStatus": 0,
+            "active": true,
+            "created": "2024-10-23T21:59:20.000Z",
+            "updated": "2024-11-11T12:17:02.000Z"
+        },
+        {
+            "externalIdentifier": "box_orange",
+            "version": 0,
+            "id": "betzold_flexeo:box_orange",
+            "shading": {
+                "version": "2.0.0",
+                "alpha": 1,
+                "transmission": 0,
+                "transmissionIOR": 0,
+                "roughness": 0.5,
+                "metallic": 0,
+                "basecolor": {
+                    "r": 1,
+                    "g": 0.3098039215686275,
+                    "b": 0
+                },
+                "doubleSided": false,
+                "alphaMode": "opaque",
+                "occlusion": 1,
+                "emissiveIntensity": 0,
+                "clearcoatIntensity": 0,
+                "clearcoatRoughness": 0,
+                "clearcoatNormalScale": 0,
+                "sheenIntensity": 0,
+                "sheenRoughness": 0,
+                "thicknessFactor": 0,
+                "attenuationDistance": 0,
+                "emissiveColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "sheenColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "attenuationColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                }
+            },
+            "label": "Orange",
+            "language": "en",
+            "catalog": "betzold_flexeo",
+            "links": {
+                "textures": "/materials/betzold_flexeo:box_orange/textures"
+            },
+            "hidden": false,
+            "visibilityStatus": 0,
+            "active": true,
+            "created": "2024-10-23T22:01:18.000Z",
+            "updated": "2024-11-11T12:16:47.000Z"
+        },
+        {
+            "externalIdentifier": "box_light_green",
+            "version": 0,
+            "id": "betzold_flexeo:box_light_green",
+            "shading": {
+                "version": "2.0.0",
+                "alpha": 1,
+                "transmission": 0,
+                "transmissionIOR": 0,
+                "roughness": 0.5,
+                "metallic": 0,
+                "basecolor": {
+                    "r": 0.8235294117647058,
+                    "g": 0.9019607843137255,
+                    "b": 0.2431372549019608
+                },
+                "doubleSided": false,
+                "alphaMode": "opaque",
+                "occlusion": 1,
+                "emissiveIntensity": 0,
+                "clearcoatIntensity": 0,
+                "clearcoatRoughness": 0,
+                "clearcoatNormalScale": 0,
+                "sheenIntensity": 0,
+                "sheenRoughness": 0,
+                "thicknessFactor": 0,
+                "attenuationDistance": 0,
+                "emissiveColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "sheenColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "attenuationColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                }
+            },
+            "label": "Light Green",
+            "language": "en",
+            "catalog": "betzold_flexeo",
+            "links": {
+                "textures": "/materials/betzold_flexeo:box_light_green/textures"
+            },
+            "hidden": false,
+            "visibilityStatus": 0,
+            "active": true,
+            "created": "2024-10-23T22:01:52.000Z",
+            "updated": "2024-11-11T12:16:39.000Z"
+        },
+        {
+            "externalIdentifier": "box_dark_green",
+            "version": 0,
+            "id": "betzold_flexeo:box_dark_green",
+            "shading": {
+                "version": "2.0.0",
+                "alpha": 1,
+                "transmission": 0,
+                "transmissionIOR": 0,
+                "roughness": 0.5,
+                "metallic": 0,
+                "basecolor": {
+                    "r": 0,
+                    "g": 0.5058823529411764,
+                    "b": 0.2156862745098039
+                },
+                "doubleSided": false,
+                "alphaMode": "opaque",
+                "occlusion": 1,
+                "emissiveIntensity": 0,
+                "clearcoatIntensity": 0,
+                "clearcoatRoughness": 0,
+                "clearcoatNormalScale": 0,
+                "sheenIntensity": 0,
+                "sheenRoughness": 0,
+                "thicknessFactor": 0,
+                "attenuationDistance": 0,
+                "emissiveColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "sheenColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "attenuationColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                }
+            },
+            "label": "Dark Green",
+            "language": "en",
+            "catalog": "betzold_flexeo",
+            "links": {
+                "textures": "/materials/betzold_flexeo:box_dark_green/textures"
+            },
+            "hidden": false,
+            "visibilityStatus": 0,
+            "active": true,
+            "created": "2024-10-23T22:02:17.000Z",
+            "updated": "2024-11-11T12:16:22.000Z"
+        },
+        {
+            "externalIdentifier": "box_light_blue",
+            "version": 0,
+            "id": "betzold_flexeo:box_light_blue",
+            "shading": {
+                "version": "2.0.0",
+                "alpha": 1,
+                "transmission": 0,
+                "transmissionIOR": 0,
+                "roughness": 0.5,
+                "metallic": 0,
+                "basecolor": {
+                    "r": 0,
+                    "g": 0.6745098039215687,
+                    "b": 0.9019607843137255
+                },
+                "doubleSided": false,
+                "alphaMode": "opaque",
+                "occlusion": 1,
+                "emissiveIntensity": 0,
+                "clearcoatIntensity": 0,
+                "clearcoatRoughness": 0,
+                "clearcoatNormalScale": 0,
+                "sheenIntensity": 0,
+                "sheenRoughness": 0,
+                "thicknessFactor": 0,
+                "attenuationDistance": 0,
+                "emissiveColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "sheenColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "attenuationColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                }
+            },
+            "label": "Light Blue",
+            "language": "en",
+            "catalog": "betzold_flexeo",
+            "links": {
+                "textures": "/materials/betzold_flexeo:box_light_blue/textures"
+            },
+            "hidden": false,
+            "visibilityStatus": 0,
+            "active": true,
+            "created": "2024-10-23T22:02:45.000Z",
+            "updated": "2024-11-11T12:16:31.000Z"
+        },
+        {
+            "externalIdentifier": "box_dark_blue",
+            "version": 0,
+            "id": "betzold_flexeo:box_dark_blue",
+            "shading": {
+                "version": "2.0.0",
+                "alpha": 1,
+                "transmission": 0,
+                "transmissionIOR": 0,
+                "roughness": 0.5,
+                "metallic": 0,
+                "basecolor": {
+                    "r": 0,
+                    "g": 0.3647058823529412,
+                    "b": 0.7372549019607844
+                },
+                "doubleSided": false,
+                "alphaMode": "opaque",
+                "occlusion": 1,
+                "emissiveIntensity": 0,
+                "clearcoatIntensity": 0,
+                "clearcoatRoughness": 0,
+                "clearcoatNormalScale": 0,
+                "sheenIntensity": 0,
+                "sheenRoughness": 0,
+                "thicknessFactor": 0,
+                "attenuationDistance": 0,
+                "emissiveColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "sheenColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "attenuationColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                }
+            },
+            "label": "Dark Blue",
+            "language": "en",
+            "catalog": "betzold_flexeo",
+            "links": {
+                "textures": "/materials/betzold_flexeo:box_dark_blue/textures"
+            },
+            "hidden": false,
+            "visibilityStatus": 0,
+            "active": true,
+            "created": "2024-10-23T22:03:08.000Z",
+            "updated": "2024-11-11T12:16:14.000Z"
+        },
+        {
+            "externalIdentifier": "box_transparent",
+            "version": 0,
+            "id": "betzold_flexeo:box_transparent",
+            "shading": {
+                "version": "2.0.0",
+                "alpha": 1,
+                "transmission": 0.6,
+                "transmissionIOR": 0,
+                "roughness": 0.5,
+                "metallic": 0,
+                "basecolor": {
+                    "r": 0.8313725490196079,
+                    "g": 0.8313725490196079,
+                    "b": 0.8313725490196079
+                },
+                "doubleSided": false,
+                "alphaMode": "opaque",
+                "occlusion": 1,
+                "emissiveIntensity": 0,
+                "clearcoatIntensity": 0,
+                "clearcoatRoughness": 0,
+                "clearcoatNormalScale": 0,
+                "sheenIntensity": 0,
+                "sheenRoughness": 0,
+                "thicknessFactor": 0,
+                "attenuationDistance": 0,
+                "emissiveColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "sheenColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "attenuationColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                }
+            },
+            "label": "Transparent",
+            "language": "en",
+            "catalog": "betzold_flexeo",
+            "links": {
+                "textures": "/materials/betzold_flexeo:box_transparent/textures"
+            },
+            "hidden": false,
+            "visibilityStatus": 0,
+            "active": true,
+            "created": "2024-10-23T22:03:37.000Z",
+            "updated": "2024-11-11T12:16:55.000Z"
+        },
+        {
+            "externalIdentifier": "metal",
+            "version": 0,
+            "id": "betzold_flexeo:metal",
+            "shading": {
+                "version": "2.0.0",
+                "alpha": 1,
+                "transmission": 0,
+                "transmissionIOR": 0,
+                "roughness": 0.5,
+                "metallic": 0.7,
+                "basecolor": {
+                    "r": 0.7803921568627451,
+                    "g": 0.7803921568627451,
+                    "b": 0.7803921568627451
+                },
+                "doubleSided": false,
+                "alphaMode": "opaque",
+                "occlusion": 1,
+                "emissiveIntensity": 0,
+                "clearcoatIntensity": 0,
+                "clearcoatRoughness": 0,
+                "clearcoatNormalScale": 0,
+                "sheenIntensity": 0,
+                "sheenRoughness": 0,
+                "thicknessFactor": 0,
+                "attenuationDistance": 0,
+                "emissiveColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "sheenColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "attenuationColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                }
+            },
+            "label": "Metal",
+            "language": "en",
+            "catalog": "betzold_flexeo",
+            "links": {
+                "textures": "/materials/betzold_flexeo:metal/textures"
+            },
+            "hidden": false,
+            "visibilityStatus": 0,
+            "active": true,
+            "created": "2024-10-30T14:35:13.000Z",
+            "updated": "2024-11-11T12:17:44.000Z"
+        },
+        {
+            "externalIdentifier": "tbdbsbrcclrd7wg2jn7ag0ppe347r",
+            "version": 0,
+            "id": "betzold_flexeo:tbdbsbrcclrd7wg2jn7ag0ppe347r",
+            "shading": {
+                "version": "2.0.0",
+                "alpha": 1,
+                "transmission": 0,
+                "transmissionIOR": 0,
+                "roughness": 0.5,
+                "metallic": 0.7,
+                "basecolor": {
+                    "r": 0.7803921568627451,
+                    "g": 0.7803921568627451,
+                    "b": 0.7803921568627451
+                },
+                "doubleSided": false,
+                "alphaMode": "opaque",
+                "occlusion": 1,
+                "emissiveIntensity": 0,
+                "clearcoatIntensity": 0,
+                "clearcoatRoughness": 0,
+                "clearcoatNormalScale": 0,
+                "sheenIntensity": 0,
+                "sheenRoughness": 0,
+                "thicknessFactor": 0,
+                "attenuationDistance": 0,
+                "emissiveColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "sheenColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "attenuationColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                }
+            },
+            "properties": {},
+            "label": "Copy 1 of Metal",
+            "language": "en",
+            "catalog": "betzold_flexeo",
+            "links": {
+                "textures": "/materials/betzold_flexeo:tbdbsbrcclrd7wg2jn7ag0ppe347r/textures"
+            },
+            "hidden": false,
+            "visibilityStatus": 0,
+            "active": true,
+            "created": "2024-10-30T14:39:01.000Z",
+            "updated": "2024-10-30T14:39:01.000Z"
+        }
+    ],
+    "meta": {
+        "total": 20,
+        "serverTime": "2025-04-15T14:17:32.392Z"
+    }
+}

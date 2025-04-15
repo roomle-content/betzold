@@ -1,0 +1,41 @@
+{
+    "height": 0,
+    "width": 0,
+    "depth": 0,
+    "displayedHeight": 0,
+    "displayedWidth": 0,
+    "displayedDepth": 0,
+    "perspectiveImage": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set5/perspectiveImage.png?marker=1729721252",
+    "perspectiveImageHD": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set5/perspectiveImageHD.png?marker=1729721252",
+    "topImage": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/interior_set5/topImage.png?marker=1729721252",
+    "assets": {},
+    "externalIdentifier": "interior_set5",
+    "configuration": "{\"children\":[],\"componentId\":\"betzold_flexeo:flexeo_interior_set\",\"dockChild\":\"\",\"dockParent\":\"\",\"dockPosition\":\"\",\"parameters\":{\"interiorType\":\"typ5\",\"materialBoxes\":\"ral_color:4001\",\"materialShelf\":\"erde:oak\",\"view\":\"open\"}}",
+    "rootComponentId": "betzold_flexeo:flexeo_interior_set",
+    "hidden": false,
+    "visibilityStatus": 0,
+    "created": "2024-10-16T09:06:58.000Z",
+    "updated": "2024-10-23T22:07:32.000Z",
+    "flipable": false,
+    "scaleable": false,
+    "colorable": false,
+    "basecolor": "0",
+    "orderable": false,
+    "requestable": false,
+    "retailPriceAllowed": false,
+    "label": "Set 5",
+    "language": "en",
+    "catalog": "betzold_flexeo",
+    "id": "betzold_flexeo:interior_set5",
+    "tags": [
+        "betzold_sets"
+    ],
+    "links": {
+        "tags": "/items/betzold_flexeo:interior_set5/tags",
+        "similarItems": "/items/betzold_flexeo:interior_set5/similarItems",
+        "perfectFit": "/items/betzold_flexeo:interior_set5/perfectFit",
+        "additionalContents": "/items/betzold_flexeo:interior_set5/additionalContents"
+    },
+    "attributes": [],
+    "version": 2
+}

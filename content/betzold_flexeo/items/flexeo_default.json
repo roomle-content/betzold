@@ -1,0 +1,41 @@
+{
+    "height": 0,
+    "width": 0,
+    "depth": 0,
+    "displayedHeight": 0,
+    "displayedWidth": 0,
+    "displayedDepth": 0,
+    "perspectiveImage": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/flexeo_default/perspectiveImage.png?marker=1739256750",
+    "perspectiveImageHD": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/flexeo_default/perspectiveImageHD.png?marker=1739256750",
+    "topImage": "https://catalog.roomle.com/c40fc0f3-047e-4976-8c3a-aba71edc1394/items/flexeo_default/topImage.png?marker=1739256750",
+    "assets": {},
+    "externalIdentifier": "flexeo_default",
+    "configuration": "{\"componentId\":\"betzold_flexeo:flexeo_master\"}",
+    "rootComponentId": "betzold_flexeo:flexeo_master",
+    "hidden": false,
+    "visibilityStatus": 0,
+    "created": "2024-10-09T10:38:33.000Z",
+    "updated": "2025-02-11T06:52:30.000Z",
+    "flipable": false,
+    "scaleable": false,
+    "colorable": false,
+    "basecolor": "0",
+    "orderable": false,
+    "requestable": false,
+    "retailPriceAllowed": false,
+    "label": "Flexeo",
+    "language": "en",
+    "catalog": "betzold_flexeo",
+    "id": "betzold_flexeo:flexeo_default",
+    "tags": [
+        "betzold_flexeo_root"
+    ],
+    "links": {
+        "tags": "/items/betzold_flexeo:flexeo_default/tags",
+        "similarItems": "/items/betzold_flexeo:flexeo_default/similarItems",
+        "perfectFit": "/items/betzold_flexeo:flexeo_default/perfectFit",
+        "additionalContents": "/items/betzold_flexeo:flexeo_default/additionalContents"
+    },
+    "attributes": [],
+    "version": 3
+}
