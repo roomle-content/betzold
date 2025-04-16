@@ -126,6 +126,13 @@
                     "condition": "directionLeftEnabled"
                 }
             ]
+        },
+        {
+            "key": "parentRuntimeId",
+            "type": "Integer",
+            "volatile": true,
+            "defaultValue": 0,
+            "visible": true
         }
     ],
     "animations": [
@@ -160,14 +167,16 @@
             "internalId": "BOX",
             "componentId": "betzold_flexeo:flexeo_box",
             "assignments": {
-                "materialBoxes": "materialBoxes"
+                "materialBoxes": "materialBoxes",
+                "parentRuntimeId": "exportMergeArticleRuntimeId"
             }
         },
         {
             "internalId": "SHELF",
             "componentId": "betzold_flexeo:flexeo_shelf",
             "assignments": {
-                "materialShelf": "materialShelf"
+                "materialShelf": "materialShelf",
+                "parentRuntimeId": "exportMergeArticleRuntimeId"
             }
         },
         {
@@ -176,6 +185,7 @@
             "assignments": {
                 "direction": "direction",
                 "materialShelf": "materialShelf",
+                "parentRuntimeId": "exportMergeArticleRuntimeId",
                 "view": "view"
             }
         }
@@ -194,7 +204,11 @@
 
             directionRightEnabled = true;
             directionLeftEnabled = true;
+
+            runtimeId = getComponentProperty('runtimeId');
         }
+
+        exportMergeArticleRuntimeId = parentRuntimeId > 0 ? parentRuntimeId : runtimeId;
     ",
     "boundingGeometry": "
         if (interiorType == 'typ3') {
@@ -274,7 +288,13 @@
                         }
                     }
                     return true;
-                "
+                ",
+                "assignmentsOnDock": {
+                    "parentRuntimeId": "self.exportMergeArticleRuntimeId"
+                },
+                "assignmentsOnUnDock": {
+                    "parentRuntimeId": 0
+                }
             }
         ]
     },

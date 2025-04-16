@@ -440,6 +440,63 @@
                     set(interiorSetChanged, 4, 1);
                 }
             "
+        },
+        {
+            "key": "parentRuntimeId",
+            "type": "Integer",
+            "volatile": true,
+            "defaultValue": 0,
+            "visible": true
+        }
+    ],
+    "functions": [
+        {
+            "key": "getArticleNr",
+            "script": "
+                _.result = 'HHAAA-' | corpusCount | '-N';
+                if (material == 'betzold_flexeo:beech') {
+                    _.result = _.result | '-M002-';
+                }
+                else if (material == 'betzold_flexeo:oak') {
+                    _.result = _.result | '-M003-';
+                }
+                else if (material == 'betzold_flexeo:maple') {
+                    _.result = _.result | '-M000-';
+                }
+                else if (material == 'betzold_flexeo:beech_dark') {
+                    _.result = _.result | '-M001-';
+                }
+                else if (material == 'betzold_flexeo:grey') {
+                    _.result = _.result | '-M006-';
+                }
+                else if (material == 'betzold_flexeo:white') {
+                    _.result = _.result | '-M009-';
+                }
+                else if (material == 'betzold_flexeo:yellow') {
+                    _.result = _.result | '-M005-';
+                }
+                else if (material == 'betzold_flexeo:red') {
+                    _.result = _.result | '-M008-';
+                }
+                else if (material == 'betzold_flexeo:green') {
+                    _.result = _.result | '-M007-';
+                }
+                else if (material == 'betzold_flexeo:blue') {
+                    _.result = _.result | '-M004-';
+                }
+
+                if (footType == 'wheels') {
+                    _.result = _.result | 'S000';
+                }
+                else if (footType == 'stand') {
+                    _.result = _.result | 'S001';
+                }
+                else if (footType == 'socket') {
+                    _.result = _.result | 'S002';
+                }
+
+                return _.result;
+            "
         }
     ],
     "onUpdate": "
@@ -462,6 +519,8 @@
             interiorDeleteDoor = [0, 0, 0, 0, 0];
 
             socketHeight = 65;
+
+            runtimeId = getComponentProperty('runtimeId');
         }
 
         for (_.i = 0; _.i < 5; _.i = _.i + 1) {
@@ -525,6 +584,10 @@
                 }
             }
         }
+
+        totalWidth = wallthickness + (width + wallthickness) * corpusCount;
+
+        exportMergeArticleRuntimeId = parentRuntimeId > 0 ? parentRuntimeId : runtimeId;
     ",
     "geometry": "
         if (footType == 'socket') {
@@ -632,6 +695,12 @@
                         condition = true;
                     }
                 ",
+                "assignmentsOnDock": {
+                    "parentRuntimeId": "self.exportMergeArticleRuntimeId"
+                },
+                "assignmentsOnUnDock": {
+                    "parentRuntimeId": 0
+                },
                 "assignmentScripts": {
                     "onDock": "
                         _.index = (round(xFromVector(connection.position) / (width + wallthickness), 0));
@@ -716,6 +785,12 @@
                         condition = false;
                     }
                 ",
+                "assignmentsOnDock": {
+                    "parentRuntimeId": "self.exportMergeArticleRuntimeId"
+                },
+                "assignmentsOnUnDock": {
+                    "parentRuntimeId": 0
+                },
                 "assignmentScripts": {
                     "onDock": "
                         _.index = (round(xFromVector(connection.position) / (width + wallthickness), 0));
@@ -784,6 +859,12 @@
                         condition = false;
                     }
                 ",
+                "assignmentsOnDock": {
+                    "parentRuntimeId": "self.exportMergeArticleRuntimeId"
+                },
+                "assignmentsOnUnDock": {
+                    "parentRuntimeId": 0
+                },
                 "assignmentScripts": {
                     "onDock": "
                         _.indexX = (round(xFromVector(connection.position) / (width + wallthickness), 0));
@@ -837,47 +918,24 @@
             "condition": "true"
         }
     ],
-    "articleNr": "
-        articleNr = 'HHAAA-' | corpusCount | '-N';
-        if (material == 'betzold_flexeo:beech') {
-            articleNr = articleNr | '-M002-';
+    "articleNr": "getArticleNr()",
+    "plugin-data": {
+        "imos-ix-export": {
+            "articles": [
+                {
+                    "name": "'808006'",
+                    "position": "getAbsolutePosition()",
+                    "attributes": {
+                        "ArticleNumber": "getArticleNr()",
+                        "___MERGEARTICLE": "self.exportMergeArticleRuntimeId",
+                        "Width": "self.totalWidth",
+                        "Depth": "self.depth",
+                        "Height": "self.totalHeight",
+                        "WoodDecor": "self.material",
+                        "Base": "self.footType"
+                    }
+                }
+            ]
         }
-        else if (material == 'betzold_flexeo:oak') {
-            articleNr = articleNr | '-M003-';
-        }
-        else if (material == 'betzold_flexeo:maple') {
-            articleNr = articleNr | '-M000-';
-        }
-        else if (material == 'betzold_flexeo:beech_dark') {
-            articleNr = articleNr | '-M001-';
-        }
-        else if (material == 'betzold_flexeo:grey') {
-            articleNr = articleNr | '-M006-';
-        }
-        else if (material == 'betzold_flexeo:white') {
-            articleNr = articleNr | '-M009-';
-        }
-        else if (material == 'betzold_flexeo:yellow') {
-            articleNr = articleNr | '-M005-';
-        }
-        else if (material == 'betzold_flexeo:red') {
-            articleNr = articleNr | '-M008-';
-        }
-        else if (material == 'betzold_flexeo:green') {
-            articleNr = articleNr | '-M007-';
-        }
-        else if (material == 'betzold_flexeo:blue') {
-            articleNr = articleNr | '-M004-';
-        }
-
-        if (footType == 'wheels') {
-            articleNr = articleNr | 'S000';
-        }
-        else if (footType == 'stand') {
-            articleNr = articleNr | 'S001';
-        }
-        else if (footType == 'socket') {
-            articleNr = articleNr | 'S002';
-        }
-    "
+    }
 }

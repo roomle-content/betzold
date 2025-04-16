@@ -20,6 +20,45 @@
                 "betzold_flexeo:box_dark_blue",
                 "betzold_flexeo:box_transparent"
             ]
+        },
+        {
+            "key": "parentRuntimeId",
+            "type": "Integer",
+            "volatile": true,
+            "defaultValue": 0,
+            "visible": true
+        }
+    ],
+    "functions": [
+        {
+            "key": "getArticleNr",
+            "script": "
+                _.result = 'AAAE-1-N';
+
+                if (materialBoxes == 'betzold_flexeo:box_yellow') {
+                    _.result = _.result | '-K000';
+                }
+                else if (materialBoxes == 'betzold_flexeo:box_orange') {
+                    _.result = _.result | '-K001';
+                }
+                else if (materialBoxes == 'betzold_flexeo:box_light_green') {
+                    _.result = _.result | '-K002';
+                }
+                else if (materialBoxes == 'betzold_flexeo:box_dark_green') {
+                    _.result = _.result | '-K003';
+                }
+                else if (materialBoxes == 'betzold_flexeo:box_light_blue') {
+                    _.result = _.result | '-K004';
+                }
+                else if (materialBoxes == 'betzold_flexeo:box_dark_blue') {
+                    _.result = _.result | '-K005';
+                }
+                else if (materialBoxes == 'betzold_flexeo:box_transparent') {
+                    _.result = _.result | '-K006';
+                }
+
+                return _.result;
+            "
         }
     ],
     "onUpdate": "
@@ -31,7 +70,11 @@
             width = 335;
             depth = 480 - wallthickness;
             elementType = 'box';
+
+            runtimeId = getComponentProperty('runtimeId');
         }
+
+        exportMergeArticleRuntimeId = parentRuntimeId > 0 ? parentRuntimeId : runtimeId;
     ",
     "boundingGeometry": "
         AddCube(Vector3f{width, depth, 150});
@@ -68,29 +111,23 @@
             }
         ]
     },
-    "articleNr": "
-        articleNr = 'AAAE-1-N';
-
-        if (materialBoxes == 'betzold_flexeo:box_yellow') {
-            articleNr = articleNr | '-K000';
+    "articleNr": "getArticleNr()",
+    "plugin-data": {
+        "imos-ix-export": {
+            "articles": [
+                {
+                    "name": "'Box'",
+                    "position": "getAbsolutePosition()",
+                    "attributes": {
+                        "ArticleNumber": "getArticleNr()",
+                        "___MERGEARTICLE": "self.exportMergeArticleRuntimeId",
+                        "Width": "self.width",
+                        "Depth": "self.depth",
+                        "Height": "150",
+                        "WoodDecor": "self.materialBoxes"
+                    }
+                }
+            ]
         }
-        else if (materialBoxes == 'betzold_flexeo:box_orange') {
-            articleNr = articleNr | '-K001';
-        }
-        else if (materialBoxes == 'betzold_flexeo:box_light_green') {
-            articleNr = articleNr | '-K002';
-        }
-        else if (materialBoxes == 'betzold_flexeo:box_dark_green') {
-            articleNr = articleNr | '-K003';
-        }
-        else if (materialBoxes == 'betzold_flexeo:box_light_blue') {
-            articleNr = articleNr | '-K004';
-        }
-        else if (materialBoxes == 'betzold_flexeo:box_dark_blue') {
-            articleNr = articleNr | '-K005';
-        }
-        else if (materialBoxes == 'betzold_flexeo:box_transparent') {
-            articleNr = articleNr | '-K006';
-        }
-    "
+    }
 }
