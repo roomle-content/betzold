@@ -167,14 +167,16 @@
             "internalId": "BOX",
             "componentId": "betzold_flexeo:flexeo_box",
             "assignments": {
-                "materialBoxes": "materialBoxes"
+                "materialBoxes": "materialBoxes",
+                "parentRuntimeId": "exportMergeArticleRuntimeId"
             }
         },
         {
             "internalId": "SHELF",
             "componentId": "betzold_flexeo:flexeo_shelf",
             "assignments": {
-                "materialShelf": "materialShelf"
+                "materialShelf": "materialShelf",
+                "parentRuntimeId": "exportMergeArticleRuntimeId"
             }
         },
         {
@@ -183,6 +185,7 @@
             "assignments": {
                 "direction": "direction",
                 "materialShelf": "materialShelf",
+                "parentRuntimeId": "exportMergeArticleRuntimeId",
                 "view": "view"
             }
         }
